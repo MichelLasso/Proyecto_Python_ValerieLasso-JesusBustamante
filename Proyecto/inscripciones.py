@@ -101,24 +101,35 @@ if opcion == "Coordinador":
                         print("------------------------------------------------\n")   
                         print("")
 
-                        salon = input("""      ingresa el salón    
+                        salon = input("Ingresa el salón: \n1. Sputnik\n2. Apolo\n3. Artemis\n")
 
-                                        1. Sputnik
-                                        2. Apolo
-                                        3. Artemis
-                        ------------------------------------------------\n""")
-
-                        if salon== "Sputnik":
-                            
-                            print("hi")
-                            print([Sputnik["estudiantes"]["nombres"]])
-
-                            IngresarEstudiante = input("Seleccione el estudiante:\n")
                         
-                            for i in miJSON:
-                                for x in i["salon"]:
-                                    if x ["nombres"]== IngresarEstudiante:
-                                        print(x["nombres"])
+                        contador = 0
+                        for i in Sputnik:
+                            contador = contador + 1
+                            for x in i["estudiantes"]:
+
+                                print(contador, x["nombres"]), print(x["apellidos"])
+                            
+
+                        estudiante = input("Ingrese el nombre del estudiante que desea revisar\n")
+                        apellido = input("Ingrese el apellido del estudiante que desea revisar\n")
+
+                        for i in Sputnik:
+                            for x in i["estudiantes"]:
+                                if x["nombres"] == estudiante:
+                                    if "apellidos" in x and x["apellidos"] == apellido:
+                                        print("------------------------------------------------")   
+                                        print("     DATOS: ", x["nombres"] and x["apellidos"]   )
+                                        print("------------------------------------------------\n")   
+                                        print("")
+                                    
+                                    else:
+                                        print("El apellido no concuerda con el nombre")
+
+                                else:
+                                    print("Nombre no encontrado")
+
                             
                             
 
