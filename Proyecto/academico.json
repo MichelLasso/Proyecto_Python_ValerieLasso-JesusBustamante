@@ -4,161 +4,161 @@
         "salon": "Sputnik",
         "estudiantes": [
             {
-                "identificación": 1093289652,
+                "identificacion": 1093289652,
                 "nombres": "Josue David",
                 "apellidos": "Gomez Bolañoz",
-                "dirección": "cll 14 #10 - 217",
+                "direccion": "cll 14 #10 - 217",
                 "acudiente": "Maria del Carmen Bolañoz Sargento",
                 "nfijo": "601 2281260",
                 "celular": "315 666 66 66",
-                "promedio": ""
+                "promedio": []
                
             },
             {
-                "identificación": 1724300976,
+                "identificacion": 1724300976,
                 "nombres": "Lenn",
                 "apellidos": "Lizcano Gelvez",
-                "dirección": "Calle 53 #6-61",
+                "direccion": "Calle 53 #6-61",
                 "acudiente": "Elizabeth León Gelvez Jhonson",
                 "nfijo": "601 2352986",
                 "celular": "322 732 06 26"
             
             },
             {
-                "identificación": 1093296678,
-                "nombres": "Mario ",
+                "identificacion": 1093296678,
+                "nombres": "Mario",
                 "apellidos": "López Carrascal",
-                "dirección": "Calle 53 #7-43",
+                "direccion": "Calle 53 #7-43",
                 "acudiente": "Leslie Carrascal Sánchez",
                 "nfijo": "601 3256738",
                 "celular": "323 645 98 00"
             
             },
             {
-                "identificación": 1654278539,
-                "nombres": "Damian ",
+                "identificacion": 1654278539,
+                "nombres": "Damian",
                 "apellidos": "Smith Caro",
-                "dirección": "Calle 23 #5-21",
+                "direccion": "Calle 23 #5-21",
                 "acudiente": "Joshua Smith Villamizar",
                 "nfijo": "601 2231456",
                 "celular": "323 432 55 00"
             
             },
             {
-                "identificación": 325672890,
-                "nombres": "Zharik  ",
+                "identificacion": 325672890,
+                "nombres": "Zharik",
                 "apellidos": "Pérez Meza",
-                "dirección": "Avenida Florez #98-03",
+                "direccion": "Avenida Florez #98-03",
                 "acudiente": "Nicol Meza Arteaga",
                 "nfijo": "601 99633276",
                 "celular": "323 987 98 43"
             
             },
             {
-                "identificación": 1735479032,
-                "nombres": "Mei  ",
+                "identificacion": 1735479032,
+                "nombres": "Mei",
                 "apellidos": "Amane Toro",
-                "dirección": "Calle 13 #3-18",
+                "direccion": "Calle 13 #3-18",
                 "acudiente": "Valentina Toro Lizcano",
                 "nfijo": "601 2317643",
                 "celular": "323 321 06 44"
             
             },
             {
-                "identificación": 2431654783,
-                "nombres": "Stefany ",
+                "identificacion": 2431654783,
+                "nombres": "Stefany",
                 "apellidos": "León Carrillo",
-                "dirección": "Calle 21 #3-17",
+                "direccion": "Calle 21 #3-17",
                 "acudiente": "Jhon León Leal",
                 "nfijo": "601 5423674",
                 "celular": "323 097 43 58"
             
             },
             {
-                "identificación": 274618894,
-                "nombres": "Lucas ",
+                "identificacion": 274618894,
+                "nombres": "Lucas",
                 "apellidos": "Amaya Buitrago",
-                "dirección": "Calle 02 #15-34",
+                "direccion": "Calle 02 #15-34",
                 "acudiente": "Jeniffer Buitrago Rolón",
                 "nfijo": "601 4376289",
                 "celular": "323 764 98 06"
             
             },
             {
-                "identificación": 3268437902,
-                "nombres": "Eduardo ",
+                "identificacion": 3268437902,
+                "nombres": "Eduardo",
                 "apellidos": "Niño Gomez",
-                "dirección": "Calle 09 #4-54",
+                "direccion": "Calle 09 #4-54",
                 "acudiente": "Estefany Gómez Soto",
                 "nfijo": "601 2374527",
                 "celular": "323 321 75 66"
             
             },
             {
-                "identificación": 1032749201,
-                "nombres": "Caroll Yosep ",
+                "identificacion": 1032749201,
+                "nombres": "Caroll Yosep",
                 "apellidos": "Mojica Palencia",
-                "dirección": "Calle 01 #30-12",
+                "direccion": "Calle 01 #30-12",
                 "acudiente": "Nicolle Palencia Ramírez",
                 "nfijo": "601 8876432",
                 "celular": "313 045 45 01"
             
             },
             {
-                "identificación": 1426843890,
-                "nombres": "Andrés ",
+                "identificacion": 1426843890,
+                "nombres": "Andrés",
                 "apellidos": "Patiño Márquez",
-                "dirección": "Calle 02 #7-16",
+                "direccion": "Calle 02 #7-16",
                 "acudiente": "Pedro Patiño Rojas",
                 "nfijo": "601 7537890",
                 "celular": "322 013 76 76"
             
             },
             {
-                "identificación": 1093296678,
-                "nombres": "Mayleth ",
+                "identificacion": 1093296678,
+                "nombres": "Mayleth",
                 "apellidos": "López Páez",
-                "dirección": "Calle 08 #4-23",
+                "direccion": "Calle 08 #4-23",
                 "acudiente": "Alejandra Páez Cardenas",
                 "nfijo": "601 1253678",
                 "celular": "322 398 44 00"
             
             },
             {
-                "identificación": 1625389012,
-                "nombres": "Katherin ",
+                "identificacion": 1625389012,
+                "nombres": "Katherin",
                 "apellidos": "Moreno Pinto",
-                "dirección": "Calle 43 #23-02",
+                "direccion": "Calle 43 #23-02",
                 "acudiente": "Luisa Pinto Sanjuan",
                 "nfijo": "601 2436578",
                 "celular": "311 055 94 00"
             
             },
             {
-                "identificación": 1524356784,
-                "nombres": "Mariangel  ",
+                "identificacion": 1524356784,
+                "nombres": "Mariangel",
                 "apellidos": "Baron Castro",
-                "dirección": "Calle 01 #1-10",
+                "direccion": "Calle 01 #1-10",
                 "acudiente": "Laura Castro Lasso",
                 "nfijo": "601 0351785",
                 "celular": "311 323 33 99"
             
             },
             {
-                "identificación": 1273473893,
-                "nombres": "Maria Gabriela ",
+                "identificacion": 1273473893,
+                "nombres": "Maria Gabriela",
                 "apellidos": "Sanchez Meza",
-                "dirección": "Calle 02 #7-22",
+                "direccion": "Calle 02 #7-22",
                 "acudiente": "Sebastian Sanchez Garcia",
                 "nfijo": "601 3245167",
                 "celular": "323 997 98 23"
             
             },
             {
-                "identificación": 1524378501,
-                "nombres": "Kleiner ",
+                "identificacion": 1524378501,
+                "nombres": "Kleiner",
                 "apellidos": "Meza Gonzalez",
-                "dirección": "Calle 12 #32-43",
+                "direccion": "Calle 12 #32-43",
                 "acudiente": "Nicol Gonzales Urbina",
                 "nfijo": "601 2347682",
                 "celular": "311 865 43 01"
@@ -171,48 +171,48 @@
         "salon": "Apolo",
         "estudiantes": [
             {
-                "identificación": 1012287553,
-                "nombres": "keythan ",
+                "identificacion": 1012287553,
+                "nombres": "keythan",
                 "apellidos": "Mendoza Gonzáles",
-                "dirección": "Calle 23 #32-66",
+                "direccion": "Calle 23 #32-66",
                 "acudiente": "May Gonzáles Rodríguez",
                 "nfijo": "601 0074326",
                 "celular": "315 333 65 34"
             },
             {
-                "identificación": 1763908432,
-                "nombres": "Darsy Taliana ",
+                "identificacion": 1763908432,
+                "nombres": "Darsy Taliana",
                 "apellidos": "Quintero Rojas",
-                "dirección": "Calle 20 #03-32",
+                "direccion": "Calle 20 #03-32",
                 "acudiente": "Allen Quintero Mendez",
                 "nfijo": "601 7741123",
                 "celular": "315 999 09 99"
             },
             {
-                "identificación": 1274356781,
-                "nombres": "Emmanuel ",
+                "identificacion": 1274356781,
+                "nombres": "Emmanuel",
                 "apellidos": "Ramirez Perez",
-                "dirección": "Calle 33 #4-23",
+                "direccion": "Calle 33 #4-23",
                 "acudiente": "Tatiana Perez Cortés",
                 "nfijo": "601 2346173",
                 "celular": "315 111 98 09"
             
             },
             {
-                "identificación": 1254782918,
-                "nombres": "Felipe  ",
+                "identificacion": 1254782918,
+                "nombres": "Felipe",
                 "apellidos": "Hernandez Amado",
-                "dirección": "Calle 3 #37-43",
+                "direccion": "Calle 3 #37-43",
                 "acudiente": "Rafael Hernandez Pirela",
                 "nfijo": "601 7658324",
                 "celular": "315 443 22 00"
             
             },
             {
-                "identificación": 1453896540,
+                "identificacion": 1453896540,
                 "nombres": "Jesús",
                 "apellidos": "Contreras Guerrero",
-                "dirección": "Calle 08 #17-27",
+                "direccion": "Calle 08 #17-27",
                 "acudiente": "Daimar Thalia Guerrero Correa",
                 "nfijo": "601 8764905",
                 "celular": "323 778 87 33"
@@ -220,110 +220,110 @@
             
             },
             {
-                "identificación": 1827647389,
-                "nombres": "Harvey ",
+                "identificacion": 1827647389,
+                "nombres": "Harvey",
                 "apellidos": "Guerrero Paredes",
-                "dirección": "Calle 06 #5-45",
+                "direccion": "Calle 06 #5-45",
                 "acudiente": "Sebastian Guerrero Ortega",
                 "nfijo": "601 1253890",
                 "celular": "323 000 98 00"
             
             },
             {
-                "identificación": 1263865890,
+                "identificacion": 1263865890,
                 "nombres": "Stevenson",
                 "apellidos": "Cuadros Moncada",
-                "dirección": "Calle 07 #18-45",
+                "direccion": "Calle 07 #18-45",
                 "acudiente": "Kevin Cuadros Ramirez",
                 "nfijo": "601 0964321",
                 "celular": "311 063 15 23"
             
             },
             {
-                "identificación": 1673789032,
+                "identificacion": 1673789032,
                 "nombres": "Kevin",
                 "apellidos": "López Quintero",
-                "dirección": "Calle 03 #6-44",
+                "direccion": "Calle 03 #6-44",
                 "acudiente": "Camilo López Pineda",
                 "nfijo": "601 1734289",
                 "celular": "311 685 55 08"
             
             },
             {
-                "identificación": 2638593790,
-                "nombres": "Luis ",
+                "identificacion": 2638593790,
+                "nombres": "Luis",
                 "apellidos": "Conedo Bandera",
-                "dirección": "Calle 53 #7-43",
+                "direccion": "Calle 53 #7-43",
                 "acudiente": "Loidalia Bandera Gonzales",
                 "nfijo": "601 6579365",
                 "celular": "313 678 33 34"
             
             },
             {
-                "identificación": 8547463747,
+                "identificacion": 8547463747,
                 "nombres": "José Luis",
                 "apellidos": "Yanez Villalobos",
-                "dirección": "Calle 33 #6-99",
+                "direccion": "Calle 33 #6-99",
                 "acudiente": "Leonardo Fabio Yanez Gutierrez",
                 "nfijo": "601 7548928",
                 "celular": "313 754 23 21"
             
             },
             {
-                "identificación": 7689438880,
-                "nombres": "Karen Yohana ",
+                "identificacion": 7689438880,
+                "nombres": "Karen Yohana",
                 "apellidos": "Salvador Montero",
-                "dirección": "Avenida Miraflores #3-11",
+                "direccion": "Avenida Miraflores #3-11",
                 "acudiente": "Enrique Salvador Bustamante",
                 "nfijo": "601 5783450",
                 "celular": "311 444 44 44"
             
             },
             {
-                "identificación": 1443336667,
-                "nombres": "Gustavo ",
+                "identificacion": 1443336667,
+                "nombres": "Gustavo",
                 "apellidos": "Omaña Barrera",
-                "dirección": "Carrera 21 Avenida 22 #10-56",
+                "direccion": "Carrera 21 Avenida 22 #10-56",
                 "acudiente": "Gustavo Omaña Meza",
                 "nfijo": "601 9999999",
                 "celular": "315 661 16 76"
             
             },
             {
-                "identificación": 4556987290,
-                "nombres": "Valeria del Valle ",
+                "identificacion": 4556987290,
+                "nombres": "Valeria del Valle",
                 "apellidos": "García García",
-                "dirección": "Calle 88 #4-112",
+                "direccion": "Calle 88 #4-112",
                 "acudiente": "Josefa García Montes",
                 "nfijo": "601 9874478",
                 "celular": "313 661 26 86"
             
             },
             {
-                "identificación": 1033286678,
+                "identificacion": 1033286678,
                 "nombres": "Andres Josue",
                 "apellidos": "Botello Caicedo",
-                "dirección": "Calle 53 #7-43",
+                "direccion": "Calle 53 #7-43",
                 "acudiente": "Ingrid Caicedo García",
                 "nfijo": "601 8934348",
                 "celular": "311 4375934"
             
             },
             {
-                "identificación": 5768296678,
-                "nombres": "Marta ",
+                "identificacion": 5768296678,
+                "nombres": "Marta",
                 "apellidos": "Rojas Pérez",
-                "dirección": "Calle 67 #66-222",
+                "direccion": "Calle 67 #66-222",
                 "acudiente": "Diego José Rojas Coronel ",
                 "nfijo": "601 4534567",
                 "celular": "323 635 00 98 "
             
             },
             {
-                "identificación": 1093555678,
-                "nombres": "Carlos ",
+                "identificacion": 1093555678,
+                "nombres": "Carlos",
                 "apellidos": "Gómez Parra",
-                "dirección": "Avenida Los Pinos #29-88 ",
+                "direccion": "Avenida Los Pinos #29-88 ",
                 "acudiente": "Carolina Parra Gutierrez",
                 "nfijo": "601 9876543",
                 "celular": "323 231 43 43"
@@ -337,158 +337,158 @@
         "salon": "Artemis",
         "estudiantes": [
             {
-                "identificación": 1093274369,
+                "identificacion": 1093274369,
                 "nombres": "Alexa Valeria",
                 "apellidos": "Sanchez Cuero",
-                "dirección":"Calle 12 #10-12",
+                "direccion":"Calle 12 #10-12",
                 "acudiente": "Mari Cuero Meza ",
                 "nfijo": "601 0064321",
                 "celular": "315 666 89 34"
             },
             {
-                "identificación": 1213657843,
+                "identificacion": 1213657843,
                 "nombres": "Natali Alexandra",
                 "apellidos": "Toscano Galviz",
-                "dirección": "Calle 9 #9-62",
+                "direccion": "Calle 9 #9-62",
                 "acudiente": "Alejandra Fernández Toscano Bustamante",
                 "nfijo": "601 0065455",
                 "celular": "315 743 02 10"
             },
             {
-                "identificación": 1093296678,
-                "nombres": "Liam ",
+                "identificacion": 1093296678,
+                "nombres": "Liam",
                 "apellidos": "Uzcátegui Schaparelli",
-                "dirección": "Calle 66 #5-83",
+                "direccion": "Calle 66 #5-83",
                 "acudiente": "Fernando Uzcátegui Castillo",
                 "nfijo": "601 3453556",
                 "celular": "313 000 00 01"
             
             },
             {
-                "identificación": 8357993486,
-                "nombres": "Luiseth ",
+                "identificacion": 8357993486,
+                "nombres": "Luiseth",
                 "apellidos": "Materán Bravo",
-                "dirección": "Calle 66 #5-83",
+                "direccion": "Calle 66 #5-83",
                 "acudiente": "Isabela Bravo Montería",
                 "nfijo": "601 7767859",
                 "celular": "313 000 00 11"
             
             },
             {
-                "identificación": 3334432323,
-                "nombres": "Amanda Andreina ",
+                "identificacion": 3334432323,
+                "nombres": "Amanda Andreina",
                 "apellidos": "Dudamel Newman",
-                "dirección": "Calle 87 #34-76",
+                "direccion": "Calle 87 #34-76",
                 "acudiente": "Rafael Dudamel Blanco",
                 "nfijo": "601 7324098",
                 "celular": "313 677 00 01"
             
             },
             {
-                "identificación": 8784874254 ,
-                "nombres": "Dayana ",
+                "identificacion": 8784874254 ,
+                "nombres": "Dayana",
                 "apellidos": "Mendoza Moncada",
-                "dirección": "Avenida Bolívar #13-175",
+                "direccion": "Avenida Bolívar #13-175",
                 "acudiente": "Gloria Moncada Rangel",
                 "nfijo": "601 8576348",
                 "celular": "311 000 98 01"
             
             },
             {
-                "identificación": 1568945568,
-                "nombres": "Charlie ",
+                "identificacion": 1568945568,
+                "nombres": "Charlie",
                 "apellidos": "Martínez Fernández",
-                "dirección": "Calle 66 #5-83",
+                "direccion": "Calle 66 #5-83",
                 "acudiente": "Gregory Martínez Díaz",
                 "nfijo": "601 3841868",
                 "celular": "313 678 93 21"
             
             },
             {
-                "identificación": 6836145787,
+                "identificacion": 6836145787,
                 "nombres": "José Gregorio" ,
                 "apellidos": "Hernández",
-                "dirección": "Avenida 3 - Carrera 7 #7-43",
+                "direccion": "Avenida 3 - Carrera 7 #7-43",
                 "acudiente": "Fernando Uzcátegui Castillo",
                 "nfijo": "601 8659688",
                 "celular": "313 357 43 85"
             
             },
             {
-                "identificación": 2678543982,
-                "nombres": "Cristiano Ronaldo ",
+                "identificacion": 2678543982,
+                "nombres": "Cristiano Ronaldo",
                 "apellidos": "dos Santos Aveiro ",
-                "dirección": "Calle 67 #46-257",
+                "direccion": "Calle 67 #46-257",
                 "acudiente": "Hugo dos Santos Real",
                 "nfijo": "601 8748254",
                 "celular": "313 822 86 45"
             
             },
             {
-                "identificación": 5354764778,
-                "nombres": "Abraham David ",
+                "identificacion": 5354764778,
+                "nombres": "Abraham David",
                 "apellidos": "Porchella Arismendi",
-                "dirección": "Calle 42 #7-454",
+                "direccion": "Calle 42 #7-454",
                 "acudiente": "Cristian Porchella Torres",
                 "nfijo": "601 5645576",
                 "celular": "313 567 45 79"
             
             },
             {
-                "identificación": 8842465456,
-                "nombres": "Migleth ",
+                "identificacion": 8842465456,
+                "nombres": "Migleth",
                 "apellidos": "Pabón Ortega",
-                "dirección": "Calle 24 #25-227",
+                "direccion": "Calle 24 #25-227",
                 "acudiente": "Fernanda Ortega Capataz",
                 "nfijo": "601 5675687",
                 "celular": "313 675 54 53"
             
             },
             {
-                "identificación": 6573257237,
-                "nombres": "Julián Alberto ",
+                "identificacion": 6573257237,
+                "nombres": "Julián Alberto",
                 "apellidos": "Rosas Rojas",
-                "dirección": "Calle 56 #97-675",
+                "direccion": "Calle 56 #97-675",
                 "acudiente": "Fernando Uzcátegui Castillo",
                 "nfijo": "601 5455650",
                 "celular": "313 876 90 08"
             
             },
             {
-                "identificación": 56571854534,
-                "nombres": "Moly Alejandra ",
+                "identificacion": 56571854534,
+                "nombres": "Moly Alejandra",
                 "apellidos": "Castillo Arellano",
-                "dirección": "Urbanización La Esmeralda",
+                "direccion": "Urbanización La Esmeralda",
                 "acudiente": "Cristina Arellano Casas",
                 "nfijo": "601 8255272",
                 "celular": "313 527 35 52"
             
             },
             {
-                "identificación": 6536787532,
-                "nombres": "Diego León ",
+                "identificacion": 6536787532,
+                "nombres": "Diego León",
                 "apellidos": "Santana Conedo",
-                "dirección": "Calle 11 #24-253",
+                "direccion": "Calle 11 #24-253",
                 "acudiente": "Carlos Santana Guerrero",
                 "nfijo": "601 5423546",
                 "celular": "302 575 45 66"
             
             },
             {
-                "identificación": 5753425345,
-                "nombres": "Luisa Fernanda ",
+                "identificacion": 5753425345,
+                "nombres": "Luisa Fernanda",
                 "apellidos": "Urrea Moros",
-                "dirección": "Avenida Loa Altos #6-89",
+                "direccion": "Avenida Loa Altos #6-89",
                 "acudiente": "Dania Moros Rivera",
                 "nfijo": "601 6732468",
                 "celular": "313 757 98 70"
             
             },
             {
-                "identificación": 4024674357,
-                "nombres": "Cristina ",
+                "identificacion": 4024674357,
+                "nombres": "Cristina",
                 "apellidos": "Aguilera Morón",
-                "dirección": "Calle 9 #10-210",
+                "direccion": "Calle 9 #10-210",
                 "acudiente": "Ramón Aguilera Torrado",
                 "nfijo": "601 5787492",
                 "celular": "313 575 78 25"

@@ -5,6 +5,8 @@ import json
 from os import system
 
 Sputnik=[]
+si="Aprobado"
+no="Desaprobado"
 
 with open('academico.json','r') as openfile:
     miJSON= json.load(openfile)
@@ -12,7 +14,6 @@ with open('academico.json','r') as openfile:
 for i in range (len(miJSON)):
         if (miJSON[i]["salon"]=="Sputnik"):
             Sputnik.append(miJSON[i])
-print(Sputnik)
 
 with open('trainer.json','r') as openfile:
     trai= json.load(openfile)
@@ -101,51 +102,91 @@ if opcion == "Coordinador":
                         print("------------------------------------------------\n")   
                         print("")
 
-                        salon = input("Ingresa el salón: \n1. Sputnik\n2. Apolo\n3. Artemis\n")
-
+                        salon = input("Ingresa el salón: \n1. Sputnik\n2. Apolo\n3. Artemis\n\n")
+                        system("cls")
                         
-                        contador = 0
+                        print("Estudiantes Sputnik")
+                        print("")
+
+                        contador = 1
                         for i in Sputnik:
-                            contador = contador + 1
                             for x in i["estudiantes"]:
 
-                                print(contador, x["nombres"]), print(x["apellidos"])
-                            
+                                print(contador, f"{x["nombres"]} {x["apellidos"]}\n")
+                                contador = contador + 1
 
                         estudiante = input("Ingrese el nombre del estudiante que desea revisar\n")
+                        print("")
                         apellido = input("Ingrese el apellido del estudiante que desea revisar\n")
 
                         for i in Sputnik:
                             for x in i["estudiantes"]:
                                 if x["nombres"] == estudiante:
                                     if "apellidos" in x and x["apellidos"] == apellido:
+                                        system("cls")
                                         print("------------------------------------------------")   
-                                        print("     DATOS: ", x["nombres"] and x["apellidos"]   )
+                                        print(f"  DATOS: {x["nombres"]} {x["apellidos"]}")
                                         print("------------------------------------------------\n")   
                                         print("")
-                                    
-                                    else:
-                                        print("El apellido no concuerda con el nombre")
 
+                                        
+                                        print(f"  Identificación: {x["identificacion"]}")
+                                        print(f"  Dirección: {x["direccion"]}")
+                                        print(f"  Acudiente: {x["acudiente"]}")
+                                        print(f"  Número Fijo: {x["nfijo"]}")
+                                        print(f"  Celular: {x["celular"]}")
+
+                                        bool = True
+                                        while bool:
+                                            PorcentajeMayor = int(input("Nota práctica 60% :\n"))
+                                            PorcentajeMenor = int(input("Nota teórica 30% :\n"))
+
+                                            if 100 >= PorcentajeMayor and PorcentajeMenor >= 1:
+                                                resultado = ((PorcentajeMayor * 0.6) + (PorcentajeMenor * 0.30))
+
+                                                if resultado >= 60:
+                                                    print(si)
+                                                else:
+                                                    print(no)
+
+                                                bool = False
+                                            else:
+                                                print("La nota supera el límite ")
+                                                print("Ingrese las notas nuevamente")
+
+                                            # Guarda el promedio en el archivo JSON
+                                            # Asumiendo que quieres agregar el promedio a cada elemento de Sputnik
+                                            for item in Sputnik:
+                                                if resultado>=60:
+                                                    item["promedio"] = si
+                                                else:
+                                                    item["promedio"] = no
+
+                                            
+                                            Sputnik["estudiantes"]["promedio"] = resultado
+                                            with open("academico.json", 'w') as f:
+                                                json.dump(Sputnik,f,indent=4)
+
+                                    else:
+                                        print("El apellido no concuerda con el nombre")            
                                 else:
                                     print("Nombre no encontrado")
-
-                            
-                            
-
-
-                    
-
-
-
-
+                                                            
                 else:
                     print("Contraseña incorrecta")
             else:
-                print("ID inválido")
-        
+                print("ID inválido") 
+                                    
+                                    
+
+                                
+
+                                
+
+                                
+                                        
 
 
-        
+                                        
 
 
