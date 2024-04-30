@@ -1,0 +1,25 @@
+[
+    {
+        "trainer": [
+            {   
+                "nombre": "Pedro",
+                "id": 12345,
+                "contrasena": "pedro123"
+               
+            },
+            {   
+                "nombre": "Andres",
+                "id": 67890,
+                "contrasena": "andres456"
+                
+            },
+            {   
+                "nombre" : "Stiven",
+                "id": 33333,
+                "contrasena": "stiven111"
+            }
+            
+        ]
+    }
+    
+]
