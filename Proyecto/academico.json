@@ -3,26 +3,6 @@
         "salon": "Sputnik",
         "estudiantes": [
             {
-                "identificacion": 1093289652,
-                "nombres": "Josue David",
-                "apellidos": "Gomez Caceres",
-                "direccion": "cll 14 #10 - 217",
-                "acudiente": "Maria del Carmen Caceres Sargento",
-                "nfijo": "601 2281260",
-                "celular": "315 666 66 66",
-                "estado": "Aprobado"
-            },
-            {
-                "identificacion": 1724300976,
-                "nombres": "Lenn",
-                "apellidos": "Lizcano Gelvez",
-                "direccion": "Calle 53 #6-61",
-                "acudiente": "Elizabeth Leon Gelvez Jhonson",
-                "nfijo": "601 2352986",
-                "celular": "322 732 06 26",
-                "estado": "Aprobado"
-            },
-            {
                 "identificacion": 1093296678,
                 "nombres": "Mario",
                 "apellidos": "Lopez Carrascal",

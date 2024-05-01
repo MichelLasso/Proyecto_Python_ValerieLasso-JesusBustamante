@@ -26,6 +26,9 @@ for i in range (len(miJSON)):
         if (miJSON[i]["salon"]=="Artemis"):
             Artemis.append(miJSON[i])
 
+with open("inscritos.json","r") as openfile:
+    inscritos= json.load(openfile)
+
 with open('trainer.json','r') as openfile:
     trai= json.load(openfile)
 
@@ -447,6 +450,18 @@ if opcion == "Coordinador":
                         print("              MÓDULO DE MATRICULAS                ")
                         print("------------------------------------------------\n")   
                         print("")
+
+                        print("Campers Inscritos")
+
+                        contador = 1
+                        for i in miJSON:
+                            for x in i["estudiantes"]:
+
+                                print(contador, f"{x["nombres"]} {x["apellidos"]} {x["estado"]}\n")
+                                contador = contador + 1
+
+                        
+
 #                         8. La coordinación académica desea contar con un módulo de matriculas que le permita
 # asignar los campers aprobados, trainer encargado, ruta de entrenamiento asignada, fecha de inicio, fecha finalización y salón de entrenamiento.
 
@@ -484,7 +499,7 @@ if opcion == "Coordinador":
 
                                 for x in i["estudiantes"]:
 
-                                    print(contador, x["nombres"], x["apellidos"])
+                                    print(contador, x["nombres"], x["apellidos"],x["estado"])
                                     contador=contador+1
 
                         if modulo==2:
