@@ -1,0 +1,41 @@
+[
+    {
+        "ruta": "Java",
+        "modulos": [
+            {
+                "ruta": "Java",
+                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                "web": "Programacion Web: HTML, CSS, Bootstrap",
+                "formal": "Programacion Formal: Java, C#",
+                "datos": "Base de Datos: (Principal: Mysql) (Alternativo: Postgresql)",
+                "backend": "Backend: SpringBoot, Express"
+            }
+        ]
+    },
+    {
+        "ruta": "NodeJS",
+        "modulos": [
+            {
+                "ruta": "NodeJS",
+                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                "web": "Programacion Web: HTML, CSS, Bootstrap",
+                "formal": "Programacion Formal: Java, JavaScript",
+                "datos": "Base de Datos: (Principal: Postgresql) (Alternativo: MongoDb)",
+                "backend": "Backend: NodeJS"
+            }
+        ]
+    },
+    {
+        "ruta": "NetCore",
+        "modulos": [
+            {
+                "ruta": "NetCore",
+                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                "web": "Programacion Web: HTML, CSS, Bootstrap",
+                "formal": "Programacion Formal: C#",
+                "datos": "Base de Datos: (Principal: Postgresql) (Alternativo: Mysql)",
+                "backend": "Backend: NetCore"
+            }
+        ]
+    }
+]
