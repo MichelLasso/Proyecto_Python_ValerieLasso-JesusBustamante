@@ -1,0 +1,32 @@
+[
+    {
+        "identificacion": 6573257237,
+        "nombres": "Julian Alberto",
+        "apellidos": "Rosas Rojas",
+        "direccion": "Calle 56 #97-675",
+        "acudiente": "Fernando Uzcategui Castillo",
+        "nfijo": "601 5455650",
+        "celular": "313 876 90 08",
+        "estado": "Aprobado"
+    },
+    {
+        "identificacion": 56571854534,
+        "nombres": "Moly Alejandra",
+        "apellidos": "Castillo Arellano",
+        "direccion": "Urbanizacion La Esmeralda",
+        "acudiente": "Cristina Arellano Casas",
+        "nfijo": "601 8255272",
+        "celular": "313 527 35 52",
+        "estado": "Aprobado"
+    },
+    {
+        "identificacion": 6536787532,
+        "nombres": "Diego Leon",
+        "apellidos": "Santana Conedo",
+        "direccion": "Calle 11 #24-253",
+        "acudiente": "Carlos Santana Guerrero",
+        "nfijo": "601 5423546",
+        "celular": "302 575 45 66",
+        "estado": "Desaprobado"
+    }
+]
