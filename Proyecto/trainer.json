@@ -15,9 +15,45 @@
             },
             {   
                 "nombre" : "Stiven",
-                "id": 33333,
+                "id": 45378,
                 "contrasena": "stiven111"
+            },
+            {   
+                "nombre" : "Jose",
+                "id": 65437,
+                "contrasena": "jose1"
+            },
+            {   
+                "nombre" : "Lucas",
+                "id": 56785,
+                "contrasena": "lucas23"
+            },
+            {   
+                "nombre" : "Michael",
+                "id": 73283,
+                "contrasena": "michael67"
+            },
+            {   
+                "nombre" : "Jorge",
+                "id": 25450,
+                "contrasena": "jorge47"
+            },
+            {   
+                "nombre" : "Juan",
+                "id": 45654,
+                "contrasena": "juan99"
+            },
+            {   
+                "nombre" : "Dilam",
+                "id": 45453,
+                "contrasena": "dilam123"
+            },
+            {   
+                "nombre" : "Gustavo",
+                "id": 34529,
+                "contrasena": "gustavo"
             }
+
             
         ]
     }

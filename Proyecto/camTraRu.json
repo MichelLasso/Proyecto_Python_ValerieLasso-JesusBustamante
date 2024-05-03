@@ -1,0 +1,86 @@
+[
+    {
+        "identificacion": 6536787532,
+        "nombres": "Diego Leon",
+        "apellidos": "Santana Conedo",
+        "direccion": "Calle 11 #24-253",
+        "acudiente": "Carlos Santana Guerrero",
+        "nfijo": "601 5423546",
+        "celular": "302 575 45 66",
+        "estado": "Aprobado",
+        "id": {
+            "nombre": "Stiven",
+            "id": 45378,
+            "contrasena": "stiven111"
+        },
+        "ruta": {
+            "ruta": "NodeJS",
+            "modulos": [
+                {
+                    "ruta": "NodeJS",
+                    "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                    "web": "Programacion Web: HTML, CSS, Bootstrap",
+                    "formal": "Programacion Formal: Java, JavaScript",
+                    "datos": "Base de Datos: (Principal: Postgresql) (Alternativo: MongoDb)",
+                    "backend": "Backend: NodeJS"
+                }
+            ]
+        }
+    },
+    {
+        "identificacion": 56571854534,
+        "nombres": "Moly Alejandra",
+        "apellidos": "Castillo Arellano",
+        "direccion": "Urbanizacion La Esmeralda",
+        "acudiente": "Cristina Arellano Casas",
+        "nfijo": "601 8255272",
+        "celular": "313 527 35 52",
+        "estado": "Aprobado",
+        "id": {
+            "nombre": "Andres",
+            "id": 67890,
+            "contrasena": "andres456"
+        },
+        "ruta": {
+            "ruta": "Java",
+            "modulos": [
+                {
+                    "ruta": "Java",
+                    "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                    "web": "Programacion Web: HTML, CSS, Bootstrap",
+                    "formal": "Programacion Formal: Java, C#",
+                    "datos": "Base de Datos: (Principal: Mysql) (Alternativo: Postgresql)",
+                    "backend": "Backend: SpringBoot, Express"
+                }
+            ]
+        }
+    },
+    {
+        "identificacion": 6573257237,
+        "nombres": "Julian Alberto",
+        "apellidos": "Rosas Rojas",
+        "direccion": "Calle 56 #97-675",
+        "acudiente": "Fernando Uzcategui Castillo",
+        "nfijo": "601 5455650",
+        "celular": "313 876 90 08",
+        "estado": "Aprobado",
+        "id": {
+            "nombre": "Pedro",
+            "id": 12345,
+            "contrasena": "pedro123"
+        },
+        "ruta": {
+            "ruta": "NodeJS",
+            "modulos": [
+                {
+                    "ruta": "NodeJS",
+                    "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                    "web": "Programacion Web: HTML, CSS, Bootstrap",
+                    "formal": "Programacion Formal: Java, JavaScript",
+                    "datos": "Base de Datos: (Principal: Postgresql) (Alternativo: MongoDb)",
+                    "backend": "Backend: NodeJS"
+                }
+            ]
+        }
+    }
+]

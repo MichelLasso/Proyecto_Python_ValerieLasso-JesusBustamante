@@ -1,0 +1,15 @@
+[
+    {
+        "identificacion": 5354764778,
+        "nombres": "Abraham David",
+        "apellidos": "Porchella Arismendi",
+        "direccion": "Calle 42 #7-454",
+        "acudiente": "Cristian Porchella Torres",
+        "nfijo": "601 5645576",
+        "celular": "313 567 45 79",
+        "estado": [
+            59.0,
+            "Desaprobado"
+        ]
+    }
+]

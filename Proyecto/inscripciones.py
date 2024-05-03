@@ -2,38 +2,29 @@
 # -*- coding: utf-8 -*-
 
 import json
+import random
 from os import system
 
+nose = []
+aprobados = set()
+desaprobados = set()
 notamodulo = []
 aprobado = []
+desaprobado = []
 Sputnik = []
 Apolo = []
 Artemis = []
 
-si="Aprobado"
+simodulo = "Modulo aprobado"
+nomodulo = "Modulo desaprobado"
+si= "Aprobado"
 no="Desaprobado"
 
 with open('academico.json','r') as openfile:
     miJSON= json.load(openfile)
 
-for i in range (len(miJSON)):
-        if (miJSON[i]["salon"]=="Sputnik"):
-            Sputnik.append(miJSON[i])
-
-for i in range (len(miJSON)):
-        if (miJSON[i]["salon"]=="Apolo"):
-            Apolo.append(miJSON[i])
-
-for i in range (len(miJSON)):
-        if (miJSON[i]["salon"]=="Artemis"):
-            Artemis.append(miJSON[i])
-
-
 with open("inscritos.json","r") as openfile:
     inscritos= json.load(openfile)
-
-with open("aprobados.json","r") as openfile:
-    aprobado= json.load(openfile)
 
 with open('trainer.json','r') as openfile:
     trai= json.load(openfile)
@@ -46,6 +37,28 @@ with open('rutas.json','r') as openfile:
 
 with open('notamodulo.json','r') as openfile:
     notamodulo= json.load(openfile)
+
+with open("aprobados.json","r") as openfile:
+    aprobado= json.load(openfile)
+
+with open('desaprobados.json','r') as openfile:
+    desaprobado= json.load(openfile)
+
+with open('camTraRu.json','r') as openfile:
+    nose = json.load(openfile)
+
+
+for i in range (len(miJSON)):
+        if (miJSON[i]["salon"]=="Sputnik"):
+            Sputnik.append(miJSON[i])
+
+for i in range (len(miJSON)):
+        if (miJSON[i]["salon"]=="Apolo"):
+            Apolo.append(miJSON[i])
+
+for i in range (len(miJSON)):
+        if (miJSON[i]["salon"]=="Artemis"):
+            Artemis.append(miJSON[i])
 
 
 
@@ -120,10 +133,11 @@ if opcion == "Coordinador":
                         print("")
 
                         print("------------------------------------------------")   
-                        print("             1. Prueba inicial\n          2. Módulo      ")
+                        print("             1. Prueba inicial\n             2. Módulo      ")
                         print("------------------------------------------------\n")   
                         print("")
                         nota = int(input(""))
+                        print("")
 
                         if nota==1:
 
@@ -134,82 +148,86 @@ if opcion == "Coordinador":
                                     print(contador, f"{x["nombres"]} {x["apellidos"]}\n")
                                     contador = contador + 1
 
-                                    estudiante = input("Ingrese el nombre del estudiante que desea revisar\n")
-                                    print("")
-                                    apellido = input("Ingrese el apellido del estudiante que desea revisar\n")
+                                estudiante = input("Ingrese el nombre del estudiante que desea revisar\n")
+                                print("")
+                                apellido = input("Ingrese el apellido del estudiante que desea revisar\n")
 
-                                    for i in inscritos:
+                                for i in inscritos:
 
-                                        for x in i["inscritos"]:
+                                    for x in i["inscritos"]:
 
-                                            if x["nombres"] == estudiante:
-                                                if "apellidos" in x and x["apellidos"] == apellido:
-                                                    system("cls")
-                                                    print("------------------------------------------------")   
-                                                    print(f"  DATOS: {x["nombres"]} {x["apellidos"]}")
-                                                    print("------------------------------------------------\n")   
-                                                    print("")
+                                        if x["nombres"] == estudiante:
+                                            if "apellidos" in x and x["apellidos"] == apellido:
+                                                system("cls")
+                                                print("------------------------------------------------")   
+                                                print(f"  DATOS: {x["nombres"]} {x["apellidos"]}")
+                                                print("------------------------------------------------\n")   
+                                                print("")
 
+                                                
+                                                print(f"  Identificación: {x["identificacion"]}")
+                                                print(f"  Dirección: {x["direccion"]}")
+                                                print(f"  Acudiente: {x["acudiente"]}")
+                                                print(f"  Número Fijo: {x["nfijo"]}")
+                                                print(f"  Celular: {x["celular"]}")
+                                                print(f"  Estado: {x["estado"]}")
+                                                print("")
+
+                                                bool = True
+                                                while bool:
+
+                                                    print("Ingrese las notas de la prueba inicial \n")
+                                                    PorcentajeMayor = int(input("Nota práctica 70% :\n"))
+                                                    PorcentajeMenor = int(input("Nota teórica 30% :\n"))
                                                     
-                                                    print(f"  Identificación: {x["identificacion"]}")
-                                                    print(f"  Dirección: {x["direccion"]}")
-                                                    print(f"  Acudiente: {x["acudiente"]}")
-                                                    print(f"  Número Fijo: {x["nfijo"]}")
-                                                    print(f"  Celular: {x["celular"]}")
-                                                    print(f"  Estado: {x["estado"]}")
-                                                    print("")
 
-                                                    bool = True
-                                                    while bool:
+                                                    if 100 >= PorcentajeMayor and PorcentajeMenor >= 1:
+                                                        resultado = ((PorcentajeMayor * 0.7) + (PorcentajeMenor * 0.30))
 
-                                                        print("Ingrese las notas correspondientes del estudiante\n")
-                                                        PorcentajeMayor = int(input("Nota práctica 60% :\n"))
-                                                        PorcentajeMenor = int(input("Nota teórica 30% :\n"))
-                                                        diez = int(input("Nota de Trabajos 10% :\n"))
-
-                                                        if 100 >= PorcentajeMayor and PorcentajeMenor >= 1:
-                                                            resultado = ((PorcentajeMayor * 0.6) + (PorcentajeMenor * 0.30) + (diez * 0.1))
-
-                                                            if resultado >= 60:
+                                                        if resultado >= 60:
+                                                            if x["identificacion"] not in aprobados:
                                                                 print("")
+                                                                x["estado"] = [resultado, si]
+                                                                aprobado += [x]
+                                                                aprobados.add(x["identificacion"])
+                                                                print("")        
+                                                                print(x["nombres"], x["apellidos"])
                                                                 print(si)
-                                                                x["estado"] = si
-                                                                aprobado.append(x)
-                                                            else:
-                                                                print("")
-                                                                print(no)
-                                                                x["estado"] = no
 
-                                                            bool = False
                                                         else:
-                                                            print("La nota supera el límite ")
-                                                            print("Ingrese las notas nuevamente")
+                                                            if x["identificacion"] not in desaprobado:
+                                                                print("")
+                                                                x["estado"] = [resultado, no]
+                                                                desaprobado += [x]
+                                                                desaprobados.add(x["identificacion"])
+                                                                print("")        
+                                                                print(x["nombres"], x["apellidos"])
+                                                                print(no)
+                                                            
+                                                        bool = False
+                                                    else:
+                                                        print("La nota supera el límite ")
+                                                        print("Ingrese las notas nuevamente")
 
-                                                        
-                                                        for item in inscritos:
-                                                            if resultado>=60:
-                                                                item["estado"] = si
-                                                            else:
-                                                                item["estado"] = no
-
-                                                        
-
-                                                        with open("aprobados.json", 'w') as f:
-                                                            json.dump(aprobado,f,indent=4)
                                                     
-                                                        print("")
-                                                        print(f"  Identificación: {x["identificacion"]}")
-                                                        print(f"  Nombres y apellidos: {x["nombres"]} {x["apellidos"]}")
-                                                        print(f"  Dirección: {x["direccion"]}")
-                                                        print(f"  Acudiente: {x["acudiente"]}")
-                                                        print(f"  Número Fijo: {x["nfijo"]}")
-                                                        print(f"  Celular: {x["celular"]}")
-                                                        print(f"  Estado: {x["estado"]}")
+                                                    for item in inscritos:
+                                                        
+                                                        if resultado>=60:
+                                                            if x not in aprobado:
+                                                                aprobados.add(x["identificacion"])
+                                                                item["estado"] = [resultado, si]
+                                                        else:
+                                                            if x not in desaprobado:
+                                                                aprobados.add(x["identificacion"])
+                                                                item["estado"] = [resultado, no]
 
-                                                else:
-                                                    print("El apellido no concuerda con el nombre")            
-                                            else:
-                                                print("Nombre no encontrado") 
+                                                    
+                                                    with open('desaprobados.json','w') as f:
+                                                        json.dump(desaprobado,f,indent=4)
+
+                                                    with open("aprobados.json", 'w') as f:
+                                                        json.dump(aprobado,f,indent=4)
+                                            
 
                         elif nota==2:
 
@@ -257,13 +275,13 @@ if opcion == "Coordinador":
 
                                                     if resultado >= 60:
                                                         print("")
-                                                        i["estado"] = si
-                                                        print(resultado, i["estado"])
+                                                        i["estado"] = simodulo
+                                                        print(i["estado"])
                                                         notamodulo += [i]
                                                     else:
                                                         print("")
-                                                        i["estado"] = no
-                                                        print(resultado, i["estado"])
+                                                        i["estado"] = nomodulo
+                                                        print(i["estado"])
                                                         notamodulo += [i]
                                                         
 
@@ -275,29 +293,14 @@ if opcion == "Coordinador":
                                                 
                                                 for item in aprobado:
                                                     if resultado>=60:
-                                                        item["estado"]
+                                                        item["estado"] = simodulo
                                                     else:
-                                                        item["estado"]
+                                                        item["estado"] = nomodulo
 
                                                 
 
                                                 with open("notamodulo.json", 'w') as f:
-                                                    json.dump(notamodulo,f,indent=4)
-                                            
-                                                print("")
-                                                print(f"  Identificación: {i["identificacion"]}")
-                                                print(f"  Nombres y apellidos: {i["nombres"]} {i["apellidos"]}")
-                                                print(f"  Dirección: {i["direccion"]}")
-                                                print(f"  Acudiente: {i["acudiente"]}")
-                                                print(f"  Número Fijo: {i["nfijo"]}")
-                                                print(f"  Celular: {i["celular"]}")
-                                                print(f"  Estado: {i["estado"]}")
-
-                                        else:
-                                            print("El apellido no concuerda con el nombre")            
-                                    else:
-                                        print("Nombre no encontrado") 
-
+                                                    json.dump(notamodulo,f, indent=4)
                     
 
                                     
@@ -387,14 +390,40 @@ if opcion == "Coordinador":
                         print("------------------------------------------------\n")   
                         print("")
 
-                        print("Campers Aprobados")
-
-                        contador = 1
                         for i in aprobado:
+                            i["id"] = random.choice(trai)
+                            i["ruta"] = random.choice(rutas)
+
+                        with open("camTraRu.json", "w") as openfile:
+                            json.dump(aprobado, openfile, indent=4)
+
+                        print(nose)
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                        # print("Campers Aprobados")
+                        # print("")
+
+                        # contador = 1
+                        # for i in aprobado:
                            
 
-                                print(contador, f"{i["nombres"]} {i["apellidos"]} : {i["estado"]}\n")
-                                contador = contador + 1
+                        #         print(contador, f"{i["nombres"]} {i["apellidos"]} : {i["estado"]}\n")
+                        #         contador = contador + 1
 
                         
 
@@ -412,7 +441,7 @@ if opcion == "Coordinador":
                         print("              MÓDULO DE REPORTES                ")
                         print("------------------------------------------------\n")   
                         print("")
-                        modulo = input(int("""      
+                        modulo = int(input("""      
 
                         1. Listar los campers que se encuentren en estado de inscrito.
                         2. Listar los campers que aprobaron el examen inicial.
@@ -429,13 +458,16 @@ if opcion == "Coordinador":
                             print("              CAMPERS INSCRITOS                 ")
                             print("------------------------------------------------\n")   
 
+                            print("Acontinuación se mostrará los campers que se han inscrito en Campus con el estado actual")
                             contador = 1
 
                             for i in miJSON:
 
                                 for x in i["estudiantes"]:
 
-                                    print(contador, x["nombres"], x["apellidos"],x["estado"])
+                                    print(contador, x["nombres"], x["apellidos"])
+                                    print(x["estado"])
+                                    print("")
                                     contador=contador+1
 
                         if modulo==2:
@@ -446,7 +478,49 @@ if opcion == "Coordinador":
                             print("              CAMPERS APROBADOS                 ")
                             print("------------------------------------------------\n")   
 
-                            print()
+                            for i in aprobado:
+                                    
+                                    contador=1
+                                    print(contador, i["nombres"], i["apellidos"])
+                                    print(i["estado"])
+                                    print("")
+                                    contador=contador+1
+
+                        if modulo==3:
+
+                            system("cls")
+
+                            print("------------------------------------------------")   
+                            print("                  TRAINERS                      ")
+                            print("------------------------------------------------\n") 
+
+                            contador=1
+                            for i in trai:
+                                for x in i["trainer"]:
+                                    print(contador, x["nombre"])
+                                    print("")
+                                    contador=contador+1
+
+                        if modulo==4:
+
+                            system("cls")
+
+                            print("------------------------------------------------")   
+                            print("         CAMPERS CON BAJO RENDIMIENTO           ")
+                            print("------------------------------------------------\n") 
+
+                            contador=1
+
+                            for i in notamodulo:
+                               
+                                if i["estado"]=="Modulo desaprobado":
+                                    
+                                    print(contador, i["nombres"], i["apellidos"])
+                                    print(i["estado"])
+                                    print("")
+                                    contador=contador+1
+
+
 
 
                 else:
