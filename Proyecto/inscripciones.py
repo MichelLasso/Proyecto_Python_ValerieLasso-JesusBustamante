@@ -121,9 +121,52 @@ if opcion == "Coordinador":
                     print("Ingreso exitoso Coordinador", x["nombre"])
                     print("")
 
-                    respuestaUsuario = int(input("Elije una opción\n\n1. Registrar notas\n2. Crear nuevas rutas\n3. Módulo de matrículas\n4. Consultar campers en alto riesgo\n5. Módulo de reportes\n\n"))
+                    respuestaUsuario = int(input("Elije una opción\n\n1. Inscribir campers\n2. Registrar notas\n3. Crear nuevas rutas\n4. Módulo de matrículas\n5. Consultar campers en alto riesgo\n6. Módulo de reportes\n\n"))
                     
                     if respuestaUsuario == 1:
+                        print("--------------------------------------------------------")
+                        print("             Inscripción de estudiantes                 ")
+                        print("--------------------------------------------------------\n\n")
+                        
+                        
+
+                        identificacion = int(input("Identificación\n"))
+                        print("")
+                        nombres = input("Nombres\n")
+                        print("")
+                        apellidos = input("Apellidos\n")
+                        print("")
+                        direccion = input("Dirección\n")
+                        print("")
+                        acudiente = input("Nombres y apellidos de acudiente\n")
+                        print("")
+                        nfijo = input("Número fijo\n")
+                        print("")
+                        celular = input("Número celular\n")
+                        print("")
+                        estado = input("Estado (inscrito)\n")
+
+                        inscritosnew = {
+
+                            "identificacion": identificacion,
+                            "nombres": nombres,
+                            "apellidos": apellidos,
+                            "direccion": direccion,
+                            "acudiente": acudiente,
+                            "nfijo": nfijo,
+                            "celular": celular,
+                            "estado": estado
+                        } 
+
+                
+                        inscritos[0]["inscritos"] += [inscritosnew]
+
+                        with open("inscritos.json", 'w') as f:
+                            json.dump(inscritos,f,indent=4)
+
+
+
+                    if respuestaUsuario == 2:
                         
                         system("cls")
 
@@ -304,7 +347,7 @@ if opcion == "Coordinador":
                     
 
                                     
-                    elif respuestaUsuario == 2:
+                    elif respuestaUsuario == 3:
 
                         system("cls")
                         print("Las rutas de entrenamiento existentes son: ")
@@ -383,7 +426,7 @@ if opcion == "Coordinador":
                                     print("-------------------------------------------------------------")
                                     print("")
 
-                    elif respuestaUsuario == 3:
+                    elif respuestaUsuario == 4:
                         
                         print("------------------------------------------------")   
                         print("              MÓDULO DE MATRICULAS                ")
@@ -435,7 +478,7 @@ if opcion == "Coordinador":
 
 
 
-                    elif respuestaUsuario==5:
+                    elif respuestaUsuario==6:
                         
                         print("------------------------------------------------")   
                         print("              MÓDULO DE REPORTES                ")
