@@ -376,24 +376,24 @@ if opcion == "Coordinador":
                             print("")
                             nombre = input("Ingrese el nombre de la nueva ruta\n")
                             print("")
-                            fundamento = input("Temas de Fundamentos de la Programación\n")
+                            formal = input("Programación Formal:\n1.Java\n2.JavaScript\n3.C#\n")
                             print("")
-                            web = input("Programación Web\n")
+                            datos = input("Bases de Datos:\nPrincipal: Mysql - MongoDb - Postgresql\n")
                             print("")
-                            formal = input("Programación Formal\n")
+                            datos2 = input("Bases de Datos:\nAlternativa: Mysql - MongoDb - Postgresql\n")
                             print("")
-                            datos = input("Bases de Datos\n")
+                            backend = input("Backend:\n1.NetCore\n2.Spring Boot\n3.NodeJS\n4.Express\n")
                             print("")
-                            backend = input("Backend\n")
 
                             modulo = {
 
                                 "ruta": nombre,
-                                "fundamentos": fundamento,
-                                "web": web,
-                                "formal": formal,
-                                "datos": datos,
-                                "backend": backend
+                                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                                "web": "Programacion Web: HTML, CSS, Bootstrap",
+                                "formal": ["Programacion Formal ", formal],
+                                "datos": ["Base de Datos Principal ", datos],
+                                "datos2": ["Base de Datos Principal ", datos2],
+                                "backend": ["Backend", backend]
                             }
 
                             nueva_ruta = {
@@ -422,6 +422,7 @@ if opcion == "Coordinador":
                                     print(x["web"])
                                     print(x["formal"])
                                     print(x["datos"])
+                                    print(x["datos2"])
                                     print(x["backend"])
                                     print("-------------------------------------------------------------")
                                     print("")

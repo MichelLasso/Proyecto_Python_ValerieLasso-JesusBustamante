@@ -7,7 +7,8 @@
                 "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
                 "web": "Programacion Web: HTML, CSS, Bootstrap",
                 "formal": "Programacion Formal: Java, C#",
-                "datos": "Base de Datos: (Principal: Mysql) (Alternativo: Postgresql)",
+                "datos": "Base de Datos: Principal: Mysql",
+                "datos2": "Base de Datos: Alternativo: Postgresql",
                 "backend": "Backend: SpringBoot, Express"
             }
         ]
@@ -20,7 +21,8 @@
                 "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
                 "web": "Programacion Web: HTML, CSS, Bootstrap",
                 "formal": "Programacion Formal: Java, JavaScript",
-                "datos": "Base de Datos: (Principal: Postgresql) (Alternativo: MongoDb)",
+                "datos": "Base de Datos: Principal: Postgresql",
+                "datos2": "Base de Datos: Alternativo: MongoDb",
                 "backend": "Backend: NodeJS"
             }
         ]
@@ -33,8 +35,61 @@
                 "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
                 "web": "Programacion Web: HTML, CSS, Bootstrap",
                 "formal": "Programacion Formal: C#",
-                "datos": "Base de Datos: (Principal: Postgresql) (Alternativo: Mysql)",
+                "datos": "Base de Datos: Principal: Mysql",
+                "datos2": "Base de Datos: Alternativo: MongoDb",
                 "backend": "Backend: NetCore"
+            }
+        ]
+    },
+    {
+        "ruta": "Python",
+        "modulos": [
+            {
+                "ruta": "Python",
+                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                "web": "Programacion Web: HTML, CSS, Bootstrap",
+                "formal": [
+                    "Programacion Formal ",
+                    "Java"
+                ],
+                "datos": [
+                    "Base de Datos Principal ",
+                    "Mysql"
+                ],
+                "datos2": [
+                    "Base de Datos Principal ",
+                    "Postgresql"
+                ],
+                "backend": [
+                    "Backend",
+                    "Spring Boot"
+                ]
+            }
+        ]
+    },
+    {
+        "ruta": "PHP",
+        "modulos": [
+            {
+                "ruta": "PHP",
+                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
+                "web": "Programacion Web: HTML, CSS, Bootstrap",
+                "formal": [
+                    "Programacion Formal ",
+                    "JavaScript"
+                ],
+                "datos": [
+                    "Base de Datos Principal ",
+                    "Mysql"
+                ],
+                "datos2": [
+                    "Base de Datos Principal ",
+                    "MongoDb"
+                ],
+                "backend": [
+                    "Backend",
+                    "Express"
+                ]
             }
         ]
     }
