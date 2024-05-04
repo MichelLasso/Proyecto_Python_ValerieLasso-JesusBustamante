@@ -42,12 +42,16 @@
         ]
     },
     {
-        "ruta": "Python",
+        "ruta": "PHP",
         "modulos": [
             {
-                "ruta": "Python",
-                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
-                "web": "Programacion Web: HTML, CSS, Bootstrap",
+                "ruta": "PHP",
+                "fundamentos": [
+                    "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python"
+                ],
+                "web": [
+                    "Programacion Web: HTML, CSS, Bootstrap"
+                ],
                 "formal": [
                     "Programacion Formal ",
                     "Java"
@@ -57,34 +61,8 @@
                     "Mysql"
                 ],
                 "datos2": [
-                    "Base de Datos Principal ",
+                    "Base de Datos Alternativa ",
                     "Postgresql"
-                ],
-                "backend": [
-                    "Backend",
-                    "Spring Boot"
-                ]
-            }
-        ]
-    },
-    {
-        "ruta": "PHP",
-        "modulos": [
-            {
-                "ruta": "PHP",
-                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
-                "web": "Programacion Web: HTML, CSS, Bootstrap",
-                "formal": [
-                    "Programacion Formal ",
-                    "JavaScript"
-                ],
-                "datos": [
-                    "Base de Datos Principal ",
-                    "Mysql"
-                ],
-                "datos2": [
-                    "Base de Datos Principal ",
-                    "MongoDb"
                 ],
                 "backend": [
                     "Backend",

@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import time
+import json #llamar el json
+from os import system #para limpiar pantalla
 
-import json
-import random
-from os import system
-
+#listas vacias de los json
 nose = []
 aprobados = set()
 desaprobados = set()
@@ -15,11 +15,13 @@ Sputnik = []
 Apolo = []
 Artemis = []
 
+#ASIGNACION DE VARIABLES QUE USAREMOS MAS ADELANTE//NOTAS
 simodulo = "Modulo aprobado"
 nomodulo = "Modulo desaprobado"
 si= "Aprobado"
 no="Desaprobado"
 
+#CREAR LISTAS PARA LOS JSON
 with open('academico.json','r') as openfile:
     miJSON= json.load(openfile)
 
@@ -48,58 +50,100 @@ with open('camTraRu.json','r') as openfile:
     nose = json.load(openfile)
 
 
-for i in range (len(miJSON)):
+for i in range (len(miJSON)):#BORRAR
         if (miJSON[i]["salon"]=="Sputnik"):
             Sputnik.append(miJSON[i])
 
-for i in range (len(miJSON)):
+for i in range (len(miJSON)):#BORRAR
         if (miJSON[i]["salon"]=="Apolo"):
             Apolo.append(miJSON[i])
 
-for i in range (len(miJSON)):
+for i in range (len(miJSON)):#BORRAR
         if (miJSON[i]["salon"]=="Artemis"):
             Artemis.append(miJSON[i])
 
 
-
-print("------------------------------------------------")
-print("                 CAMPUSLAND                     ")
-print("------------------------------------------------\n")
-
-opcion = input(str("""       Elige tu cargo para iniciar sesión      
-
-                1. Trainer
-                2. Coordinador
-------------------------------------------------\n"""))
-
-
-
-if opcion == "Trainer":
-   
+bool=True
+while bool==True:
     system("cls")
+    print("------------------------------------------------")#PRIMER MENU
+    print("                 CAMPUSLAND                     ")
+    print("------------------------------------------------\n")
 
-    print("------------------------------------------------")   
-    print("             BIENVENIDO TRAINER                 ")
-    print("------------------------------------------------\n")   
-    print("")
-            
-    usuario = int(input("Número de Identificación: "))
-    print("")
-    password = input("Password: ")
+    opcion = input(str("""       Elige tu cargo para iniciar sesión      
 
-    for i in trai:
-        for x in i["trainer"]:
-            if x["id"] == usuario:
-                if "contrasena" in x and x["contrasena"] == password:
-                    print("Ingreso válido Trainer", x["nombre"])
-                else:
-                    print("Contraseña incorrecta")
+                    1. Trainer
+                    2. Coordinador
+                    3. Camper
+    ------------------------------------------------\n"""))
+
+
+    if opcion == "Trainer":
+        system("cls")
+
+        print("------------------------------------------------")   
+        print("             BIENVENIDO TRAINER                 ")
+        print("------------------------------------------------\n")   
+        print("")
+        
+        while True: #BUCLE INFINITO Y TERMINA HASTA QUE EL USUARIO INGRESE EL ID U CONTRASEÑA VALIDOS
+
+            usuario = int(input("Número de Identificación: "))#DATO 1 DEL TRAINER/ID
+            print("")
+            password = input("Contraseña: ")#DATO 2 DEL TRAINER/CONTRASEÑA
+
+            usuario_valido = False
+
+            for i in trai: #RECOORE LA LISTA DE TRAINERS
+                for x in i["trainer"]:
+
+                    if x["id"] == usuario: #SI EL ID DEL TRAINER COINCIDE CON EL QUE ESTA EN EL JSON
+                        
+                        if "contrasena" in x and x["contrasena"] == password:#SI LA CONTRASEÑA DEL USURIO COINCIDE CON EL QUE ESTA EN EL JSON 
+
+                            system("cls")#Borrar Pantalla                      
+                            print("Ingreso válido Trainer", x["nombre"]) #IMPRIME UN MENSAJE DE VALIDACION
+
+                            opcionmenut= input ("menu......\n2. Cerrar Sesión\n")
+
+                            if opcionmenut==1:
+                                print("faltan cositas")
+                            
+                            elif opcionmenut==2:
+
+                                system("cls")
+
+                                print("------------------------------------------------")   
+                                print("                 CERRAR SESION                  ")
+                                print("------------------------------------------------\n") 
+
+                                sino=int(input("Desea cerrar sesión? \n1.Si\n2.No\n"))
+
+                                if sino==1:
+                                    
+                                    system("cls")
+                                    print("Cerrando sesión...")
+                                    time.sleep(3)
+                            
+                            usuario_valido = True #FINALIZACION DEL BUCLE
+                            
+                            break  # SALIR EL BUCLE
+                        else:
+                            print("\nContraseña incorrecta\n")
+                            break  # SALIR DEL BUCLE EXTERNO /SE REPITE LA PREGUNTA
+
+            if usuario_valido:#SI LOS DATOS SON VALIDOS TERMINA EL BUCLE
+                    break  #PARA QUE NO ME MUESTRE UNA LISTA DE LOS TRAINERS QUE NO COINCIDEN CON LOS DATOS
             else:
-                print("ID inválido")
-    
-if opcion == "Coordinador":
+                system("cls")#BPRRAR PANTALLA
+                print("ID inválido. Por favor, intenta de nuevo.\n")
+                    
+        break
 
-    system("cls")  
+    if opcion == "Coordinador":
+
+
+        system("cls")  
 
     print("------------------------------------------------")   
     print("           BIENVENIDO COORDINADOR               ")
@@ -121,7 +165,7 @@ if opcion == "Coordinador":
                     print("Ingreso exitoso Coordinador", x["nombre"])
                     print("")
 
-                    respuestaUsuario = int(input("Elije una opción\n\n1. Inscribir campers\n2. Registrar notas\n3. Crear nuevas rutas\n4. Módulo de matrículas\n5. Consultar campers en alto riesgo\n6. Módulo de reportes\n\n"))
+                    respuestaUsuario = int(input("Elije una opción\n\n1. Inscribir campers\n2. Registrar notas\n3. Crear nuevas rutas\n4. Módulo de matrículas\n5. Consultar campers en alto riesgo\n6. Módulo de reportes\n7. Cerrar sesión\n"))
                     
                     if respuestaUsuario == 1:
                         print("--------------------------------------------------------")
@@ -278,8 +322,8 @@ if opcion == "Coordinador":
                             for i in aprobado:
     
 
-                                    print(contador, f"{i["nombres"]} {i["apellidos"]}\n")
-                                    contador = contador + 1
+                                print(contador, f"{i["nombres"]} {i["apellidos"]}\n")
+                                contador = contador + 1
 
                             estudiante = input("Ingrese el nombre del estudiante que desea revisar\n")
                             print("")
@@ -321,6 +365,21 @@ if opcion == "Coordinador":
                                                         i["estado"] = simodulo
                                                         print(i["estado"])
                                                         notamodulo += [i]
+
+                                                        salon = int(input("Elija el salón del alumno\n1.Sputnik\n2.Apolo\n3.Artemis\n\n"))
+
+                                                        for a in miJSON:
+                                                            for x in a["estudiantes"]:
+                                                                if salon == 1:
+                                                                    x["Sputnik"] += [i]
+
+                                                                if salon == 2:
+                                                                    x["Apolo"] += [i]
+
+                                                                if salon == 3:
+                                                                    x["Artemis"] += [i]
+                                                            
+
                                                     else:
                                                         print("")
                                                         i["estado"] = nomodulo
@@ -353,7 +412,7 @@ if opcion == "Coordinador":
                         print("Las rutas de entrenamiento existentes son: ")
                         print("")
 
-                        for i in rutas:
+                        for i in rutas: #MOSTRAR TODAS LAS RUTAS QUE HAY
                             for x in i["modulos"]:
                                 print("-------------------------------------------------------------")
                                 print(x["ruta"])
@@ -373,32 +432,72 @@ if opcion == "Coordinador":
                             
                             print("--------------------------------------------------------")
                             print("Ingrese los temas de cada módulo correspondiente")
+                            print("--------------------------------------------------------")
+                            print("")#ELEGIR LOS MODULOS DE LA RUTA CON UN MENU
+                            nombre = input("Ingrese el nombre de la nueva ruta\n\n")
                             print("")
-                            nombre = input("Ingrese el nombre de la nueva ruta\n")
+
+                            formal = int(input("Programación Formal:\n1.Java\n2.JavaScript\n3.C#\n\n"))
                             print("")
-                            formal = input("Programación Formal:\n1.Java\n2.JavaScript\n3.C#\n")
+                            if formal == 1:
+                                formal = "Java"
+
+                            elif formal == 2:
+                                formal = "JavaScript"
+
+                            elif formal == 3:
+                                formal = "C#"
+
+                            datos = int(input("Bases de Datos: Principal:\n1.Mysql\n2.MongoDb\n3.Postgresql\n\n"))
                             print("")
-                            datos = input("Bases de Datos:\nPrincipal: Mysql - MongoDb - Postgresql\n")
+                            if datos == 1:
+                                datos = "Mysql"
+
+                            elif datos == 2:
+                                datos = "MongoDb"
+
+                            elif datos == 3:
+                                datos = "Postgresql"
+
+                            datos2 = int(input("Bases de Datos: Alternativa:\n1.Mysql\n2.MongoDb\n3.Postgresql\n\n"))
                             print("")
-                            datos2 = input("Bases de Datos:\nAlternativa: Mysql - MongoDb - Postgresql\n")
+                            if datos2 == 1:
+                                datos2 = "Mysql"
+
+                            elif datos2 == 2:
+                                datos2 = "MongoDb"
+
+                            elif datos2 == 3:
+                                datos2 = "Postgresql"
+
+                            backend = int(input("Backend:\n1.NetCore\n2.Spring Boot\n3.NodeJS\n4.Express\n\n"))
                             print("")
-                            backend = input("Backend:\n1.NetCore\n2.Spring Boot\n3.NodeJS\n4.Express\n")
-                            print("")
+                            if backend == 1:
+                                backend = "Netcore"
+
+                            if backend == 2:
+                                backend = "Spring Boot"
+
+                            if backend == 3:
+                                backend = "NodeJS"
+
+                            if backend == 4:
+                                backend = "Express"
 
                             modulo = {
 
                                 "ruta": nombre,
-                                "fundamentos": "fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python",
-                                "web": "Programacion Web: HTML, CSS, Bootstrap",
-                                "formal": ["Programacion Formal ", formal],
-                                "datos": ["Base de Datos Principal ", datos],
-                                "datos2": ["Base de Datos Principal ", datos2],
-                                "backend": ["Backend", backend]
+                                "fundamentos": ["fundamentos de la programacion: Introduccion a la algoritmia, PSeint, Python"],#NO CAMBIAN
+                                "web": ["Programacion Web: HTML, CSS, Bootstrap"],#NO CAMBIAN
+                                "formal": ["Programacion Formal ", formal],#SE PUEDE ELEGIR
+                                "datos": ["Base de Datos Principal ", datos],#SE PUEDE ELEGIR
+                                "datos2": ["Base de Datos Alternativa ", datos2],#SE PUEDE ELEGIR
+                                "backend": ["Backend", backend]#SE PUEDE ELEGIR
                             }
-
+                            #PARA CREAR EN EL JSON LA NUEVA RUTA
                             nueva_ruta = {
                                 "ruta": nombre,
-                                "modulos": [modulo]
+                                "modulos": [modulo]#AGREGAR EL MODULO A LA RUTA
                             }
 
                             rutas += [nueva_ruta]
@@ -434,40 +533,49 @@ if opcion == "Coordinador":
                         print("------------------------------------------------\n")   
                         print("")
 
+                        print("Campers Aprobados\n")
+                        contador=1
                         for i in aprobado:
-                            i["id"] = random.choice(trai)
-                            i["ruta"] = random.choice(rutas)
-
-                        with open("camTraRu.json", "w") as openfile:
-                            json.dump(aprobado, openfile, indent=4)
-
-                        print(nose)
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                        # print("Campers Aprobados")
-                        # print("")
-
-                        # contador = 1
-                        # for i in aprobado:
                            
+                            print(contador, i["nombres"], i["apellidos"])
+                            print(i["estado"])
+                            print("")
+                            contador=contador+1
 
-                        #         print(contador, f"{i["nombres"]} {i["apellidos"]} : {i["estado"]}\n")
-                        #         contador = contador + 1
+                        estudiante = input("Ingrese el nombre del estudiante\n")
+                        print("")
+                        apellido = input("Ingrese el apellido del estudianten\n")
+
+                        for i in aprobado:
+                                
+                            if i["nombres"] == estudiante:
+                                if "apellidos" in i and i["apellidos"] == apellido:
+
+                                    system("cls")
+                                    print("------------------------------------------------")   
+                                    print(f" ASIGNACION: {i["nombres"]} {i["apellidos"]}")
+                                    print("------------------------------------------------\n")   
+                                    print("")
+                                    
+                                    print("---TRAINERS---")
+                                    contador=1
+                                    for i in trai:
+                                        for x in i["trainer"]:
+                                            print(contador, x["nombre"])
+                                            print("")
+                                            contador=contador+1
+
+                                    aggTrainer=input("Asignar Trainer\n")
+                                    for i in trai:
+                                        for x in i["trainer"]:
+                                            if  x["nombre"]==aggTrainer:
+                                                
+                                                i["estudiantes"]["nombres"]["trainer"]=i
+                                                
+                                                miJSON += [i]
+                                                with open("aprobados.json", 'r+') as f:
+                                                    json.dump(miJSON,f, indent=4)
+                                                print(x["trainer"])
 
                         
 
@@ -477,7 +585,7 @@ if opcion == "Coordinador":
 
 
 
-
+                                                print("")
 
                     elif respuestaUsuario==6:
                         
@@ -564,6 +672,24 @@ if opcion == "Coordinador":
                                     print("")
                                     contador=contador+1
 
+                    elif respuestaUsuario==7:
+                        
+                        system("cls")
+
+                        print("------------------------------------------------")   
+                        print("                 CERRAR SESION                  ")
+                        print("------------------------------------------------\n") 
+
+                        sino=int(input("Desea cerrar sesión? \n1.Si\n2.No\n"))
+
+                        if sino==1:
+
+                            system("cls")
+                            print("Cerrando sesión...")
+                            time.sleep(3)
+                            
+                            
+
 
 
 
@@ -572,7 +698,7 @@ if opcion == "Coordinador":
             else:
                 print("ID inválido") 
                                     
-                                    
+    bool==False                               
 
                                 
 
