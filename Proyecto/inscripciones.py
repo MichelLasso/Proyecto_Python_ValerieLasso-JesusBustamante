@@ -331,7 +331,6 @@ while bool==True:
 
                             for i in aprobado:
 
-                                
                                     if i["nombres"] == estudiante:
                                         if "apellidos" in i and i["apellidos"] == apellido:
                                             system("cls")
@@ -369,15 +368,15 @@ while bool==True:
                                                         salon = int(input("Elija el salón del alumno\n1.Sputnik\n2.Apolo\n3.Artemis\n\n"))
 
                                                         for a in miJSON:
-                                                            for x in a["estudiantes"]:
-                                                                if salon == 1:
-                                                                    x["Sputnik"] += [i]
+                                                            
+                                                                if salon == 1 and a["salon"] == "Sputnik":
+                                                                    a["estudiantes"] += [i]
 
-                                                                if salon == 2:
-                                                                    x["Apolo"] += [i]
+                                                                if salon == 2 and a["salon"] == "Apolo":
+                                                                    a["estudiantes"] += [i]
 
-                                                                if salon == 3:
-                                                                    x["Artemis"] += [i]
+                                                                if salon == 3 and a["salon"] == "Artemis":
+                                                                    a["estudiantes"] += [i]
                                                             
 
                                                     else:
@@ -399,7 +398,8 @@ while bool==True:
                                                     else:
                                                         item["estado"] = nomodulo
 
-                                                
+                                                with open("academico.json", "w") as f:
+                                                    json.dump(miJSON,f, indent=4)
 
                                                 with open("notamodulo.json", 'w') as f:
                                                     json.dump(notamodulo,f, indent=4)
