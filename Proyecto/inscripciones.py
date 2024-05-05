@@ -52,17 +52,17 @@ with open('rutrai.json','r') as openfile:
     rutica = json.load(openfile)
 
 
-for i in range (len(miJSON)):#BORRAR
-        if (miJSON[i]["salon"]=="Sputnik"):
-            Sputnik.append(miJSON[i])
+# for i in range (len(miJSON)):#BORRAR
+#     if (miJSON[i]["salon"]=="Sputnik"):
+#         Sputnik.append(miJSON[i])
 
-for i in range (len(miJSON)):#BORRAR
-        if (miJSON[i]["salon"]=="Apolo"):
-            Apolo.append(miJSON[i])
+# for i in range (len(miJSON)):#BORRAR
+#         if (miJSON[i]["salon"]=="Apolo"):
+#             Apolo.append(miJSON[i])
 
-for i in range (len(miJSON)):#BORRAR
-        if (miJSON[i]["salon"]=="Artemis"):
-            Artemis.append(miJSON[i])
+# for i in range (len(miJSON)):#BORRAR
+#         if (miJSON[i]["salon"]=="Artemis"):
+#             Artemis.append(miJSON[i])
 
 
 bool=True
@@ -167,7 +167,7 @@ while bool==True:
                         print("Ingreso exitoso Coordinador", x["nombre"])
                         print("")
 
-                        respuestaUsuario = int(input("Elije una opción\n\n1. Inscribir campers\n2. Registrar notas\n3. Crear nuevas rutas\n4. Módulo de matrículas\n5. Consultar campers en alto riesgo\n6. Módulo de reportes\n7. Cerrar sesión\n\n"))
+                        respuestaUsuario = int(input("Elije una opción\n\n1. Inscribir campers\n2. Registrar notas\n3. Crear nuevas rutas\n4. Módulo de matrículas\n5. Módulo de reportes\n6. Cerrar sesión\n\n"))
                         
                         if respuestaUsuario == 1:
                             print("--------------------------------------------------------")
@@ -340,41 +340,49 @@ while bool==True:
                                                 
 
                             elif nota==2:
+                                
+                                seleccion = input("¿En qué salón se encuentra el estudiante\n1.Sputnik\n2.Apolo\n3.Artemis\n\n")
 
                                 contador = 1
-                                for i in aprobado:
-        
+                                for i in miJSON:
+                                    if i["salon"] == "Sputnik":
+                                        estudiantes = i["estudiantes"]
+                                        break
 
-                                    print(contador, f"{i["nombres"]} {i["apellidos"]}\n")
+
+                                for x in estudiantes:
+                                    print(contador, f"{x["nombres"]} {x["apellidos"]}\n")
                                     contador = contador + 1
 
-                                estudiante = input("Ingrese el nombre del estudiante que desea revisar\n")
+                                estudiante = input("Ingrese el nombre del estudiante\n\n")
                                 print("")
-                                apellido = input("Ingrese el apellido del estudiante que desea revisar\n")
+                                apellido = input("Ingrese el apellido del estudiante\n\n")
+                                print("")
 
-                                for i in aprobado:
+                                for i in estudiantes:
+                                    
+                                        if i["nombres"] == estudiante:
+                                            if "apellidos" in i and i["apellidos"] == apellido:
+                                                
+                                                print("------------------------------------------------")   
+                                                print(f"  DATOS: {i["nombres"]} {i["apellidos"]}")
+                                                print("------------------------------------------------\n")   
+                                                print("")
 
-                                    if i["nombres"] == estudiante:
-                                        if "apellidos" in i and i["apellidos"] == apellido:
-                                            system("cls")
-                                            print("------------------------------------------------")   
-                                            print(f"  DATOS: {i["nombres"]} {i["apellidos"]}")
-                                            print("------------------------------------------------\n")   
-                                            print("")
+                                                
+                                                print(f"  Identificación: {i["identificacion"]}")
+                                                print(f"  Dirección: {i["direccion"]}")
+                                                print(f"  Acudiente: {i["acudiente"]}")
+                                                print(f"  Número Fijo: {i["nfijo"]}")
+                                                print(f"  Celular: {i["celular"]}")
+                                                print(f"  Estado: {i["estado"]}")
+                                                print("")
 
-                                            
-                                            print(f"  Identificación: {i["identificacion"]}")
-                                            print(f"  Dirección: {i["direccion"]}")
-                                            print(f"  Acudiente: {i["acudiente"]}")
-                                            print(f"  Número Fijo: {i["nfijo"]}")
-                                            print(f"  Celular: {i["celular"]}")
-                                            print(f"  Estado: {i["estado"]}")
-                                            print("")
+                                            i["modulos"] = {}
 
-                                            bool = True
-                                            while bool:
+                                            for modulo in range(1, 6):
+                                                print("Ingrese las notas correspondientes del estudiante para el módulo", modulo)
 
-                                                print("Ingrese las notas correspondientes del estudiante\n")
                                                 PorcentajeMayor = int(input("Nota práctica 60% :\n"))
                                                 PorcentajeMenor = int(input("Nota teórica 30% :\n"))
                                                 diez = int(input("Nota de Trabajos 10% :\n"))
@@ -384,34 +392,25 @@ while bool==True:
 
                                                     if resultado >= 60:
                                                         print("")
-                                                        i["estado"] = "Cursante, módulo aprobado"
-                                                        print(i["estado"])
-                                                        notamodulo += [i]
+                                                        i["modulos"][f"Modulo {modulo}"] = (f"[{resultado}] [{"Modulo aprobado"}]")
+                                                        print("Modulo Aprobado")
+                                                        
                                                                     
                                                     else:
                                                         print("")
-                                                        i["estado"] = "Cursante, módulo desaprobado"
-                                                        print(i["estado"])
-                                                        notamodulo += [i]
-                                                
-                                                    bool = False
+                                                        i["modulos"][f"Modulo {modulo}"] = (f"[{resultado}] [{"Modulo aprobado"}]")
+                                                        print("Modulo Desaprobado")
+                                                        
+
                                                 else:
                                                     print("La nota supera el límite ")
                                                     print("Ingrese las notas nuevamente")
 
-                                                
-                                                for item in aprobado:
-                                                    if resultado>=60:
-                                                        item["estado"] = "Cursante, modulo aprobado"
-                                                    else:
-                                                        item["estado"] = "Cursante, modulo desaprobado"
+                                            notamodulo += [i]
 
 
-                                                with open("academico.json", "w") as f:
-                                                    json.dump(miJSON,f, indent=4)
-
-                                                with open("notamodulo.json", 'w') as f:
-                                                    json.dump(notamodulo,f, indent=4)
+                                            with open("notamodulo.json", 'w') as f:
+                                                json.dump(notamodulo,f, indent=4)
                     
 
                                         
@@ -545,7 +544,7 @@ while bool==True:
                             print("")
 
                             #Asignar ruta a Trainer
-                            opc = int(input("¿Qué deseas hacer?\n1.Asignación de Rutas a Trainers\n2.Asignación de trainers y rutas a estudiantes\n3.Asignar fecha de incio y finalización\n\n"))
+                            opc = int(input("¿Qué deseas hacer?\n1.Asignación de Rutas a Trainers\n2.Asignación de trainers y rutas a estudiantes - Asignar fecha de incio y finalización\n\n"))
 
                             if opc == 1:
                                 print("---Asignación de Rutas a Trainers---")
@@ -609,103 +608,227 @@ while bool==True:
                                     print("")
 
                                     contador = 1
-                                    for i in Sputnik:
-                                        for x in i["estudiantes"]:
+                                    for i in miJSON:
+                                        if i["salon"] == "Sputnik":
+                                            estudiantes = i["estudiantes"]
+                                            break
 
-                                            print(contador, f"{x["nombres"]} {x["apellidos"]}\n")
-                                            contador = contador + 1
+
+                                    for x in estudiantes:
+                                        print(contador, f"{x["nombres"]} {x["apellidos"]}\n")
+                                        contador = contador + 1
 
                                     estudiante = input("Ingrese el nombre del estudiante\n\n")
                                     print("")
                                     apellido = input("Ingrese el apellido del estudiante\n\n")
                                     print("")
 
-                                    for i in Sputnik:
+                                    for i in estudiantes:
                                         
-                                        for x in i["estudiantes"]:
-                                            if x["nombres"] == estudiante:
-                                                if "apellidos" in x and x["apellidos"] == apellido:
+                                            if i["nombres"] == estudiante:
+                                                if "apellidos" in i and i["apellidos"] == apellido:
                                                     
                                                     print("------------------------------------------------")   
-                                                    print(f"  DATOS: {x["nombres"]} {x["apellidos"]}")
+                                                    print(f"  DATOS: {i["nombres"]} {i["apellidos"]}")
                                                     print("------------------------------------------------\n")   
                                                     print("")
 
                                                     
-                                                    print(f"  Identificación: {x["identificacion"]}")
-                                                    print(f"  Dirección: {x["direccion"]}")
-                                                    print(f"  Acudiente: {x["acudiente"]}")
-                                                    print(f"  Número Fijo: {x["nfijo"]}")
-                                                    print(f"  Celular: {x["celular"]}")
-                                                    print(f"  Estado: {x["estado"]}")
+                                                    print(f"  Identificación: {i["identificacion"]}")
+                                                    print(f"  Dirección: {i["direccion"]}")
+                                                    print(f"  Acudiente: {i["acudiente"]}")
+                                                    print(f"  Número Fijo: {i["nfijo"]}")
+                                                    print(f"  Celular: {i["celular"]}")
+                                                    print(f"  Estado: {i["estado"]}")
                                                     print("")
 
-                                print("Trainers y rutas que puedes asignar:\n")
+                                    print("Trainers y rutas que puedes asignar:\n")
 
-                                contador = 1
-                                for i in rutica:
+                                    contador = 1
+                                    for i in rutica:
                                         print(contador,f" Trainer: {i["nombre"]} - Ruta: {i["ruta"]}")
                                         contador = contador + 1
+
+                                    print("")
+                                    aggtrainer = input("Elige un trainer (cada trainer ya cuenta con una ruta establecida)\n\n")
+
+                                    for i in rutica:
+                                        if i["nombre"] == aggtrainer:
+                                            asigRuta = i["ruta"]
+                                            break
+
+
+                                    iniFecha = input("Ingrese la fecha de inicio del estudiante (dd/mm/aaaa)\n\n")
+                                    print("")
+                                    finFecha = input("Ingrese la fecha de finalización del estudiante (dd/mm/aaaa)\n\n")
+
+                                    for i in estudiantes:
+                                        
+                                            if i["nombres"] == estudiante:
+                                                if "apellidos" in i and i["apellidos"] == apellido:
+                                                    i["trainer"] = aggtrainer
+                                                    i["ruta"] = asigRuta
+                                                    i["inicio"] = iniFecha
+                                                    i["finalizacion"] = finFecha
+                                
+
+                                    with open("academico.json", "w") as openfile:
+                                        json.dump(miJSON, openfile, indent=4)
+
+                                if asignar == 2:
+                                    system("cls")
+                                    print("Estudiantes Apolo")
+                                    print("")
+
+                                    contador = 1
+                                    for i in miJSON:
+                                        if i["salon"] == "Apolo":
+                                            estudiantes = i["estudiantes"]
+                                            break
+
+
+                                    for x in estudiantes:
+                                        print(contador, f"{x["nombres"]} {x["apellidos"]}\n")
+                                        contador = contador + 1
+
+                                    estudiante = input("Ingrese el nombre del estudiante\n\n")
+                                    print("")
+                                    apellido = input("Ingrese el apellido del estudiante\n\n")
+                                    print("")
+
+                                    for i in estudiantes:
+                                        
+                                            if i["nombres"] == estudiante:
+                                                if "apellidos" in i and i["apellidos"] == apellido:
+                                                    
+                                                    print("------------------------------------------------")   
+                                                    print(f"  DATOS: {i["nombres"]} {i["apellidos"]}")
+                                                    print("------------------------------------------------\n")   
+                                                    print("")
+
+                                                    
+                                                    print(f"  Identificación: {i["identificacion"]}")
+                                                    print(f"  Dirección: {i["direccion"]}")
+                                                    print(f"  Acudiente: {i["acudiente"]}")
+                                                    print(f"  Número Fijo: {i["nfijo"]}")
+                                                    print(f"  Celular: {i["celular"]}")
+                                                    print(f"  Estado: {i["estado"]}")
+                                                    print("")
+
+                                    print("Trainers y rutas que puedes asignar:\n")
+
+                                    contador = 1
+                                    for i in rutica:
+                                        print(contador,f" Trainer: {i["nombre"]} - Ruta: {i["ruta"]}")
+                                        contador = contador + 1
+
+                                    print("")
+                                    aggtrainer = input("Elige un trainer (cada trainer ya cuenta con una ruta establecida)\n\n")
+
+                                    for i in rutica:
+                                        if i["nombre"] == aggtrainer:
+                                            asigRuta = i["ruta"]
+                                            break
+
+
+                                    iniFecha = input("Ingrese la fecha de inicio del estudiante (dd/mm/aaaa)\n\n")
+                                    print("")
+                                    finFecha = input("Ingrese la fecha de finalización del estudiante (dd/mm/aaaa)\n\n")
+
+                                    for i in estudiantes:
+                                        
+                                            if i["nombres"] == estudiante:
+                                                if "apellidos" in i and i["apellidos"] == apellido:
+                                                    i["trainer"] = aggtrainer
+                                                    i["ruta"] = asigRuta
+                                                    i["inicio"] = iniFecha
+                                                    i["finalizacion"] = finFecha
+                                
+
+                                    with open("academico.json", "w") as openfile:
+                                        json.dump(miJSON, openfile, indent=4)
+
+                                if asignar == 3:
+                                    system("cls")
+                                    print("Estudiantes Artemis")
+                                    print("")
+
+                                    contador = 1
+                                    for i in miJSON:
+                                        if i["salon"] == "Artemis":
+                                            estudiantes = i["estudiantes"]
+                                            break
+
+
+                                    for x in estudiantes:
+                                        print(contador, f"{x["nombres"]} {x["apellidos"]}\n")
+                                        contador = contador + 1
+
+                                    estudiante = input("Ingrese el nombre del estudiante\n\n")
+                                    print("")
+                                    apellido = input("Ingrese el apellido del estudiante\n\n")
+                                    print("")
+
+                                    for i in estudiantes:
+                                        
+                                            if i["nombres"] == estudiante:
+                                                if "apellidos" in i and i["apellidos"] == apellido:
+                                                    
+                                                    print("------------------------------------------------")   
+                                                    print(f"  DATOS: {i["nombres"]} {i["apellidos"]}")
+                                                    print("------------------------------------------------\n")   
+                                                    print("")
+
+                                                    
+                                                    print(f"  Identificación: {i["identificacion"]}")
+                                                    print(f"  Dirección: {i["direccion"]}")
+                                                    print(f"  Acudiente: {i["acudiente"]}")
+                                                    print(f"  Número Fijo: {i["nfijo"]}")
+                                                    print(f"  Celular: {i["celular"]}")
+                                                    print(f"  Estado: {i["estado"]}")
+                                                    print("")
+
+                                    print("Trainers y rutas que puedes asignar:\n")
+
+                                    contador = 1
+                                    for i in rutica:
+                                        print(contador,f" Trainer: {i["nombre"]} - Ruta: {i["ruta"]}")
+                                        contador = contador + 1
+
+                                    print("")
+                                    aggtrainer = input("Elige un trainer (cada trainer ya cuenta con una ruta establecida)\n\n")
+
+                                    for i in rutica:
+                                        if i["nombre"] == aggtrainer:
+                                            asigRuta = i["ruta"]
+                                            break
+
+                                    iniFecha = input("Ingrese la fecha de inicio del estudiante (dd/mm/aaaa)\n\n")
+                                    print("")
+                                    finFecha = input("Ingrese la fecha de finalización del estudiante (dd/mm/aaaa)\n\n")
+
+
+                                    for i in estudiantes:
+                                        
+                                            if i["nombres"] == estudiante:
+                                                if "apellidos" in i and i["apellidos"] == apellido:
+                                                    i["trainer"] = aggtrainer
+                                                    i["ruta"] = asigRuta
+                                                    i["inicio"] = iniFecha
+                                                    i["finalizacion"] = finFecha
+                                
+
+                                    with open("academico.json", "w") as openfile:
+                                        json.dump(miJSON, openfile, indent=4)
+
+                            
+
+
+                                    
                                 
 
 
-
-
-
-                            # print("Campers Aprobados\n")
-                            # contador=1
-                            # for i in aprobado:
-                            
-                            #     print(contador, i["nombres"], i["apellidos"])
-                            #     print(i["estado"])
-                            #     print("")
-                            #     contador=contador+1
-
-                            # estudiante = input("Ingrese el nombre del estudiante\n")
-                            # print("")
-                            # apellido = input("Ingrese el apellido del estudianten\n")
-
-                            # for i in aprobado:
-                                    
-                            #     if i["nombres"] == estudiante:
-                            #         if "apellidos" in i and i["apellidos"] == apellido:
-
-                            #             system("cls")
-                            #             print("------------------------------------------------")   
-                            #             print(f" ASIGNACION: {i["nombres"]} {i["apellidos"]}")
-                            #             print("------------------------------------------------\n")   
-                            #             print("")
-                                        
-                            #             print("---TRAINERS---")
-                            #             contador=1
-                            #             for i in trai:
-                            #                 for x in i["trainer"]:
-                            #                     print(contador, x["nombre"])
-                            #                     print("")
-                            #                     contador=contador+1
-
-                            #             aggTrainer=input("Asignar Trainer\n")
-                            #             for i in trai:
-                            #                 for x in i["trainer"]:
-                            #                     if  x["nombre"]==aggTrainer:
-                                                    
-                            #                         i["estudiantes"]["nombres"]["trainer"]=i
-                                                    
-                            #                         miJSON += [i]
-                            #                         with open("aprobados.json", 'r+') as f:
-                            #                             json.dump(miJSON,f, indent=4)
-                            #                         print(x["trainer"])
-
-                            
-
-                                                        
-
-
-
-
-                                                    #print("")
-
-                        elif respuestaUsuario==6:
+                        elif respuestaUsuario==5:
                             
                             print("------------------------------------------------")   
                             print("              MÓDULO DE REPORTES                ")
@@ -790,7 +913,7 @@ while bool==True:
                                         print("")
                                         contador=contador+1
 
-                        elif respuestaUsuario==7:
+                        elif respuestaUsuario==6:
                             
                             system("cls")
 
