@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Pedro",
+        "ruta": "Java"
+    },
+    {
+        "nombre": "Stiven",
+        "ruta": "NodeJS"
+    },
+    {
+        "nombre": "Andres",
+        "ruta": "NetCore"
+    },
+    {
+        "nombre": "Michael",
+        "ruta": "PHP"
+    }
+]

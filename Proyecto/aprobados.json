@@ -1,5 +1,15 @@
 [
     {
+        "identificacion": 4024674357,
+        "nombres": "Cristina",
+        "apellidos": "Aguilera Moron",
+        "direccion": "Calle 9 #10-210",
+        "acudiente": "Ramon Aguilera Torrado",
+        "nfijo": "601 5787492",
+        "celular": "313 575 78 25",
+        "estado": "Aprobado"
+    },
+    {
         "identificacion": 6536787532,
         "nombres": "Diego Leon",
         "apellidos": "Santana Conedo",
@@ -18,17 +28,5 @@
         "nfijo": "601 8255272",
         "celular": "313 527 35 52",
         "estado": "Aprobado"
-    },
-    {
-        "identificacion": 6573257237,
-        "nombres": "Julian Alberto",
-        "apellidos": "Rosas Rojas",
-        "direccion": "Calle 56 #97-675",
-        "acudiente": "Fernando Uzcategui Castillo",
-        "nfijo": "601 5455650",
-        "celular": "313 876 90 08",
-        "estado": "Aprobado"
     }
-    
-    
 ]
