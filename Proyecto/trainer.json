@@ -3,53 +3,63 @@
         "trainer": [
             {   
                 "nombre": "Pedro",
+                "apellidot": "Gomez",
                 "id": 12345,
                 "contrasena": "pedro123"
                
             },
             {   
                 "nombre": "Andres",
+                "apellidot": "Jurado",
                 "id": 67890,
                 "contrasena": "andres456"
                 
             },
             {   
                 "nombre" : "Stiven",
+                "apellidot": "Carvajal",
                 "id": 45378,
                 "contrasena": "stiven111"
             },
             {   
                 "nombre" : "Jose",
+                "apellidot": "Ramirez",
                 "id": 65437,
                 "contrasena": "jose1"
             },
             {   
                 "nombre" : "Lucas",
+                "apellidot": "Garcia",
                 "id": 56785,
                 "contrasena": "lucas23"
             },
             {   
                 "nombre" : "Michael",
+                "apellidot": "Caphecci",
                 "id": 73283,
                 "contrasena": "michael67"
             },
             {   
                 "nombre" : "Jorge",
+                "apellidot": "Gonzalez",
                 "id": 25450,
                 "contrasena": "jorge47"
             },
             {   
                 "nombre" : "Juan",
+                "apellidot": "Perez",
                 "id": 45654,
                 "contrasena": "juan99"
             },
             {   
                 "nombre" : "Dilam",
+                "apellidot": "Gutierrez",
                 "id": 45453,
                 "contrasena": "dilam123"
             },
             {   
                 "nombre" : "Gustavo",
+                "apellidot": "Mendoza",
                 "id": 34529,
                 "contrasena": "gustavo"
             }

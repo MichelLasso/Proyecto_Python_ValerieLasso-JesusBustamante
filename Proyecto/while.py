@@ -1,20 +1,23 @@
+promedio = notas/5
+i["promedio"] = promedio
 
-# Supongamos que estos son tus trainers y salones
-trainers = ["Trainer1", "Trainer2", "Trainer3", "Trainer4", "Trainer5", "Trainer6"]
-salones = ["Salon1", "Salon2", "Salon3"]
+if promedio < 60:
+    moduloP = {
+        "Nombre": i["nombres"],
+        "Apellido": i["apellidos"],
+        "Promedio": i["promedio"]
+    }
+    #PARA CREAR EN EL JSON LA NUEVA RUTA
+    riesgo = {
+        "Riesgo" : "Riesgo Alto",
+        "Notas": [moduloP]#AGREGAR EL MODULO A LA RUTA
+    }
 
-# Crea un diccionario para almacenar los horarios de los trainers
-horarios = {}
+    notaP += [riesgo]
+    notamodulo += [i]
 
-# Asigna cada trainer a un salon
-for i in range(len(trainers)):
-    salon = salones[i % len(salones)]  # Asigna los salones en orden, repitiendo si es necesario
-    if salon not in horarios:
-        horarios[salon] = []
-    horarios[salon].append({"trainer": trainers[i], "horario": (i % 4 + 1) * 4})
+    with open("promedioNotas.json", "w") as f:
+        json.dump(notaP, f, indent=4)
 
-# Imprime los horarios
-for salon, trainers in horarios.items():
-    print(f"{salon}:")
-    for trainer in trainers:
-        print(f"  {trainer['trainer']}: {trainer['horario']}-00 a {trainer['horario']+4}-00")
+    with open("notamodulo.json", 'w') as f:
+        json.dump(notamodulo,f, indent=4)

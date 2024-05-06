@@ -10,7 +10,11 @@
                 "acudiente": "Ramon Aguilera Torrado",
                 "nfijo": "601 5787492",
                 "celular": "313 575 78 25",
-                "estado": "Cursando"
+                "estado": "Cursando",
+                "trainer": "Pedro",
+                "ruta": "Java",
+                "inicio": "19-02-2024",
+                "finalizacion": "14-04-2025"
             }
         ]
     },
@@ -25,7 +29,11 @@
                 "acudiente": "Carlos Santana Guerrero",
                 "nfijo": "601 5423546",
                 "celular": "302 575 45 66",
-                "estado": "Cursando"
+                "estado": "Cursando",
+                "trainer": "Stiven",
+                "ruta": "NodeJS",
+                "inicio": "19-02-2024",
+                "finalizacion": "14-04-2024"
             }
         ]
     },
@@ -40,7 +48,11 @@
                 "acudiente": "Cristina Arellano Casas",
                 "nfijo": "601 8255272",
                 "celular": "313 527 35 52",
-                "estado": "Cursando"
+                "estado": "Cursando",
+                "trainer": "Andres",
+                "ruta": "NetCore",
+                "inicio": "19-02-2024",
+                "finalizacion": "14-04-2025"
             }
         ]
     }

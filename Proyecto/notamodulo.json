@@ -1,1 +1,46 @@
-[]
+[
+    {
+        "identificacion": 4024674357,
+        "nombres": "Cristina",
+        "apellidos": "Aguilera Moron",
+        "direccion": "Calle 9 #10-210",
+        "acudiente": "Ramon Aguilera Torrado",
+        "nfijo": "601 5787492",
+        "celular": "313 575 78 25",
+        "estado": "Cursando",
+        "trainer": "Pedro",
+        "ruta": "Java",
+        "inicio": "19-02-2024",
+        "finalizacion": "14-04-2025",
+        "modulos": {
+            "Modulo 1": "[90.0] [Modulo aprobado]",
+            "Modulo 2": "[90.0] [Modulo aprobado]",
+            "Modulo 3": "[90.0] [Modulo aprobado]",
+            "Modulo 4": "[90.0] [Modulo aprobado]",
+            "Modulo 5": "[90.0] [Modulo aprobado]"
+        },
+        "promedio": 90.0
+    },
+    {
+        "identificacion": 6536787532,
+        "nombres": "Diego Leon",
+        "apellidos": "Santana Conedo",
+        "direccion": "Calle 11 #24-253",
+        "acudiente": "Carlos Santana Guerrero",
+        "nfijo": "601 5423546",
+        "celular": "302 575 45 66",
+        "estado": "Cursando",
+        "trainer": "Stiven",
+        "ruta": "NodeJS",
+        "inicio": "19-02-2024",
+        "finalizacion": "14-04-2024",
+        "modulos": {
+            "Modulo 1": "[24.0] [Modulo desaprobado]",
+            "Modulo 2": "[90.0] [Modulo aprobado]",
+            "Modulo 3": "[10.0] [Modulo desaprobado]",
+            "Modulo 4": "[10.0] [Modulo desaprobado]",
+            "Modulo 5": "[10.0] [Modulo desaprobado]"
+        },
+        "promedio": 28.8
+    }
+]
