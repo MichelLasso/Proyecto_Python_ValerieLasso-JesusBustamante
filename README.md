@@ -66,9 +66,16 @@ evalúa el rendimiento de cada uno de los **campers** teniendo en cuenta la not
 |```aprobados.json```| Este archivo json conetiene a los estudiantes que han sido aprobados.|
 |```coordinador.json```| Este archivo json conetiene los datos personales del coordinador.|
 |```desaprobaddos.json```| Este archivo json contiene a los estudiantes que han sido desaprobados.|
-|```inscripciones.json```| Este archivo json conetiene a todos los estudiantes que quieren cursar en CampusLands.|
+|```inscripciones.py```| Este archivo es el princpal, ya que une todos los archivos json para completar con éxito nuestro proyecto.|
 |```inscritos.json```| Este archivo json contiene a todos los estudiantes que están cursando en CampusLands.|
 |```notamodulo.json```| Este archivo json contiene a todas las notas que el estudiante obtuvo en cada módulo.|
 |```promedioNotas.json```| Este archivo json contiene el promedio total del estudiante.|
 |```rutas.json```| Este archivo json contiene las rutas disponibles en el curso.|
 |```trainer.json```| Este archivo json contiene a todos los profesores de Campusalands.|
+
+### Contacto
+*Correo eléctronico*
+* valerie01liz01@gmail.com
+* jesusgustamante08@gmail.com
+
+Este proyecto fue desarrollado por Valerie Lasso y Jesus Bustamante para CampusLand con el fin de completar el curso de python.
