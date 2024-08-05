@@ -55,6 +55,14 @@ evalúa el rendimiento de cada uno de los **campers** teniendo en cuenta la not
 - Listar los **campers** que cuentan con bajo rendimiento.
 - Listar los **campers** y **trainers** que se encuentren asociados a una ruta de entrenamiento.
 - Mostrar cuantos **campers** perdieron y aprobaron cada uno de los módulos teniendo en cuenta la ruta de entrenamiento y el entrenador encargado.
+  
+## Instalación 
+
+1. Clona el repositorio: Utiliza el comando "git clone" seguido de la URL del repositorio para clonar el proyecto en tu computadora local.
+
+2. Abre la carpeta del proyecto: Navega a la carpeta donde se clonó el proyecto y ábrela en tu editor de código favorito.
+
+3. Abre el archivo main.py: Busca el archivo Python principal (usualmente "main.py") y ejecútalo en la terminal.
 
 ## Estructura
 
