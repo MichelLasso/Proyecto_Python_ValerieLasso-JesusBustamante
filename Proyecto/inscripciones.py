@@ -104,13 +104,14 @@ while bool==True:
                             print("Fecha de finalización: ",x["finalizacion"])
 
                             fechasesion = datetime.date.today()
-                            actividad = "Revisión de sus datos personales"
+                            actividad = "Revision de sus datos personales"
+                            estadoplat = "Activo"
 
                             entrada = {
                                 "id": password,
                                 "fecha": fechasesion.strftime("%Y-%m-%d"),
                                 "actividad": actividad,
-                                "EstadoPlataforma": "Activo"
+                                "EstadoPlataforma": estadoplat
                             }
 
                             entradaSesionjson +=[entrada]
@@ -121,14 +122,13 @@ while bool==True:
                             pregunta = input("\n¿Desea continuar viendo sus datos? Si no, se volverá al menú principal. (si/no)\n")
                             if pregunta.lower() != "si":
                                 bool = False
-                            else:
 
-                                for i in entradaSesionjson:
-                                    if i["EstadoPlataforma"]=="activo":
-                                        i["EstadoPlataforma"]="inactivo"
+                                tamaño = len(entradaSesionjson)
 
-                                        with open("entradaSesion.json", "w")as b:
-                                            json.dump(entradaSesionjson, b, indent=4)
+                                entradaSesionjson[tamaño-1]["EstadoPlataforma"] = "finalizado"
+
+                                with open("entradaSesion.json", "w")as b:
+                                    json.dump(entradaSesionjson, b, indent=4)
 
                             break                     
         break

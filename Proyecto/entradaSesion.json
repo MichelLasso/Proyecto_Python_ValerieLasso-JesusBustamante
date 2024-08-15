@@ -1,18 +1,8 @@
 [
     {
         "id": 4024674357,
-        "fecha": "2024-08-15"
-    },
-    {
-        "id": 4024674357,
         "fecha": "2024-08-15",
-        "actividad": "Revisi\u00f3n de sus datos personales",
-        "EstadoPlataforma": "Activo"
-    },
-    {
-        "id": 4024674357,
-        "fecha": "2024-08-15",
-        "actividad": "Revisi\u00f3n de sus datos personales",
-        "EstadoPlataforma": "Activo"
+        "actividad": "Revision de sus datos personales",
+        "EstadoPlataforma": "finalizado"
     }
 ]
