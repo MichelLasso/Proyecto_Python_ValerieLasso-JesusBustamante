@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import time
-import datetime
+from datetime import datetime
 import json #llamar el json
 from os import system #para limpiar pantalla
 import copy
@@ -103,13 +103,13 @@ while bool==True:
                             print("Fecha de inicio: ",x["inicio"])
                             print("Fecha de finalización: ",x["finalizacion"])
 
-                            fechasesion = datetime.date.today()
+                            fechasesion = datetime.now()
                             actividad = "Revision de sus datos personales"
                             estadoplat = "Activo"
 
                             entrada = {
                                 "id": password,
-                                "fecha": fechasesion.strftime("%Y-%m-%d"),
+                                "fecha": fechasesion.strftime("%Y-%m-%d %H:%M:%S"),
                                 "actividad": actividad,
                                 "EstadoPlataforma": estadoplat
                             }
