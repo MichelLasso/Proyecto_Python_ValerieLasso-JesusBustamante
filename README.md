@@ -55,6 +55,15 @@ evalúa el rendimiento de cada uno de los **campers** teniendo en cuenta la not
 - Listar los **campers** que cuentan con bajo rendimiento.
 - Listar los **campers** y **trainers** que se encuentren asociados a una ruta de entrenamiento.
 - Mostrar cuantos **campers** perdieron y aprobaron cada uno de los módulos teniendo en cuenta la ruta de entrenamiento y el entrenador encargado.
+
+12.  **Registro de Entradas**
+
+- El sistema debe permitir registrar cada entrada de los **campers** a la plataforma, incluyendo:
+
+    - ID del **camper**.
+    - Fecha y hora de la entrada.
+    - Actividades realizadas durante la sesión.
+    - Estado de la sesión (Activa, Inactiva, Finalizada).
   
 ## Instalación 
 
@@ -66,7 +75,7 @@ evalúa el rendimiento de cada uno de los **campers** teniendo en cuenta la not
 
 ## Estructura
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 |Nombre del Archivo|Función|
 |--|--|
@@ -80,10 +89,10 @@ evalúa el rendimiento de cada uno de los **campers** teniendo en cuenta la not
 |```promedioNotas.json```| Este archivo json contiene el promedio total del estudiante.|
 |```rutas.json```| Este archivo json contiene las rutas disponibles en el curso.|
 |```trainer.json```| Este archivo json contiene a todos los profesores de Campusalands.|
-
+|```entradaSesion.json```| Este Json contiene el registro de entrada de cada estudiante en la plataforma.|
 ### Contacto
 *Correo eléctronico*
 * valerie01liz01@gmail.com
 * jesusgustamante08@gmail.com
 
-Este proyecto fue desarrollado por Valerie Lasso y Jesus Bustamante para CampusLand con el fin de completar el curso de python.
+Este proyecto fue desarrollado por Valerie Lasso y Jesus Bustamante para CampusLands como parte del proyecto final del módulo de GIT.
