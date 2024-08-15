@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import time
+import datetime
 import json #llamar el json
 from os import system #para limpiar pantalla
 import copy
@@ -81,7 +82,7 @@ while bool==True:
                 for x in i["estudiantes"]:
                     if x["nombres"] == usuario:
                         if "identificacion" in x and x["identificacion"] == password:
-
+                            
                             system("cls")
 
                             print("------------------------------------------------")   
@@ -99,6 +100,13 @@ while bool==True:
                             print("Ruta: ",x["ruta"])
                             print("Fecha de inicio: ",x["inicio"])
                             print("Fecha de finalización: ",x["finalizacion"])
+
+                            fechasesion = datetime.date.today()
+
+                            entrada = {
+                                "id": password,
+                                "fecha": fechasesion.strftime("%Y-%m-%d"),
+                            }
 
                             pregunta = input("\n¿Desea continuar viendo sus datos? Si no, se volverá al menú principal. (si/no)\n")
                             if pregunta.lower() != "si":
