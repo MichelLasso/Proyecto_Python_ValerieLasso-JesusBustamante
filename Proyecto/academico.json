@@ -14,7 +14,8 @@
                 "trainer": "Pedro",
                 "ruta": "Java",
                 "inicio": "19-02-2024",
-                "finalizacion": "14-04-2025"
+                "finalizacion": "14-04-2025",
+                "EstadoPlataforma": "inactivo"
             }
         ]
     },
@@ -33,7 +34,8 @@
                 "trainer": "Stiven",
                 "ruta": "NodeJS",
                 "inicio": "19-02-2024",
-                "finalizacion": "14-04-2024"
+                "finalizacion": "14-04-2024",
+                "EstadoPlataforma": "inactivo"
             }
         ]
     },
@@ -52,7 +54,8 @@
                 "trainer": "Andres",
                 "ruta": "NetCore",
                 "inicio": "19-02-2024",
-                "finalizacion": "14-04-2025"
+                "finalizacion": "14-04-2025",
+                "EstadoPlataforma": "inactivo"
             }
         ]
     }

@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import time
-import datetime
+from datetime import datetime
 import json #llamar el json
 from os import system #para limpiar pantalla
 import copy
@@ -52,6 +52,8 @@ with open('rutrai.json','r') as openfile:
 with open("promedioNotas.json","r") as openfile:
     notaP= json.load(openfile)
 
+with open("entradaSesion.json","r") as openfile:
+    entradaSesionjson= json.load(openfile)
 
 bool=True
 while bool==True:
@@ -108,9 +110,33 @@ while bool==True:
                                 "fecha": fechasesion.strftime("%Y-%m-%d"),
                             }
 
+                            fechasesion = datetime.now()
+                            actividad = "Revision de sus datos personales"
+                            estadoplat = "Activo"
+
+                            entrada = {
+                                "id": password,
+                                "fecha": fechasesion.strftime("%Y-%m-%d %H:%M:%S"),
+                                "actividad": actividad,
+                                "EstadoPlataforma": estadoplat
+                            }
+
+                            entradaSesionjson +=[entrada]
+
+                            with open("entradaSesion.json", "w")as b:
+                                json.dump(entradaSesionjson, b, indent=4)
+
                             pregunta = input("\n¿Desea continuar viendo sus datos? Si no, se volverá al menú principal. (si/no)\n")
                             if pregunta.lower() != "si":
                                 bool = False
+
+                                tamaño = len(entradaSesionjson)
+
+                                entradaSesionjson[tamaño-1]["EstadoPlataforma"] = "finalizado"
+
+                                with open("entradaSesion.json", "w")as b:
+                                    json.dump(entradaSesionjson, b, indent=4)
+
                             break                     
         break
     
